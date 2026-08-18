@@ -3,9 +3,12 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
+import vercel from '@astrojs/vercel';
+
+const isVercel = process.env.VERCEL === '1';
 
 export default defineConfig({
-  adapter: cloudflare(),
+  adapter: isVercel ? vercel() : cloudflare(),
   site: 'https://decisionengines.ai',
   build: {
     inlineStylesheets: 'always',

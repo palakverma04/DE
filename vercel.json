@@ -1,0 +1,259 @@
+{
+  "redirects": [
+    {
+      "source": "/invoiceiq",
+      "destination": "/product/invoiceiq",
+      "permanent": true
+    },
+    {
+      "source": "/invoice-automation",
+      "destination": "/product/invoiceiq",
+      "permanent": true
+    },
+    {
+      "source": "/contract-automation",
+      "destination": "/product/contractiq",
+      "permanent": true
+    },
+    {
+      "source": "/converseiq",
+      "destination": "/product/converseiq",
+      "permanent": true
+    },
+    {
+      "source": "/converseiq-assistant",
+      "destination": "/product/converseiq",
+      "permanent": true
+    },
+    {
+      "source": "/decisioniq",
+      "destination": "/product/decisioniq",
+      "permanent": true
+    },
+    {
+      "source": "/decisioniq-automation",
+      "destination": "/product/decisioniq",
+      "permanent": true
+    },
+    {
+      "source": "/connectors",
+      "destination": "/product/connectors",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/company/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-2",
+      "destination": "/company/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/company/contact",
+      "permanent": true
+    },
+    {
+      "source": "/demo",
+      "destination": "/company/contact",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/company/careers",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/finance-team",
+      "destination": "/solutions/finance",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-team",
+      "destination": "/solutions/procurement",
+      "permanent": true
+    },
+    {
+      "source": "/sales-team",
+      "destination": "/solutions/sales",
+      "permanent": true
+    },
+    {
+      "source": "/processes-for-finance",
+      "destination": "/solutions/finance",
+      "permanent": true
+    },
+    {
+      "source": "/processes-for-procurement",
+      "destination": "/solutions/procurement",
+      "permanent": true
+    },
+    {
+      "source": "/processes-for-sales",
+      "destination": "/solutions/sales",
+      "permanent": true
+    },
+    {
+      "source": "/invoice-reconciliation",
+      "destination": "/solutions/finance/invoice-reconciliation",
+      "permanent": true
+    },
+    {
+      "source": "/contract-validation",
+      "destination": "/solutions/finance/contract-validation",
+      "permanent": true
+    },
+    {
+      "source": "/cash-reconciliation",
+      "destination": "/solutions/finance/cash-reconciliation",
+      "permanent": true
+    },
+    {
+      "source": "/risk-management",
+      "destination": "/solutions/finance/risk-management",
+      "permanent": true
+    },
+    {
+      "source": "/accounting-policies",
+      "destination": "/solutions/finance/accounting-policies",
+      "permanent": true
+    },
+    {
+      "source": "/paper-invoice-to-purchase-order",
+      "destination": "/solutions/finance/paper-invoice-to-po",
+      "permanent": true
+    },
+    {
+      "source": "/cfo-2",
+      "destination": "/solutions/finance/cfo",
+      "permanent": true
+    },
+    {
+      "source": "/cfo",
+      "destination": "/solutions/finance/cfo",
+      "permanent": true
+    },
+    {
+      "source": "/finance-manager",
+      "destination": "/solutions/finance/finance-manager",
+      "permanent": true
+    },
+    {
+      "source": "/invoice-digitization",
+      "destination": "/solutions/procurement/invoice-digitization",
+      "permanent": true
+    },
+    {
+      "source": "/invoice-po-reconciliation",
+      "destination": "/solutions/procurement/invoice-po-reconciliation",
+      "permanent": true
+    },
+    {
+      "source": "/service-invoice-validation",
+      "destination": "/solutions/procurement/service-invoice-validation",
+      "permanent": true
+    },
+    {
+      "source": "/invoice-compliance",
+      "destination": "/solutions/procurement/invoice-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/invoice-approval-risk",
+      "destination": "/solutions/procurement/invoice-approval-risk",
+      "permanent": true
+    },
+    {
+      "source": "/procure-to-pay",
+      "destination": "/solutions/procurement/procure-to-pay",
+      "permanent": true
+    },
+    {
+      "source": "/fraud-detection",
+      "destination": "/solutions/procurement/fraud-detection",
+      "permanent": true
+    },
+    {
+      "source": "/cpo",
+      "destination": "/solutions/procurement/cpo",
+      "permanent": true
+    },
+    {
+      "source": "/contract-manager",
+      "destination": "/solutions/procurement/contract-manager",
+      "permanent": true
+    },
+    {
+      "source": "/lead-scoring",
+      "destination": "/solutions/sales/lead-scoring",
+      "permanent": true
+    },
+    {
+      "source": "/rfp-automation",
+      "destination": "/solutions/sales/rfp",
+      "permanent": true
+    },
+    {
+      "source": "/sales-cross-sell",
+      "destination": "/solutions/sales/cross-sell",
+      "permanent": true
+    },
+    {
+      "source": "/sales-up-sell",
+      "destination": "/solutions/sales/up-sell",
+      "permanent": true
+    },
+    {
+      "source": "/cro",
+      "destination": "/solutions/sales/cro",
+      "permanent": true
+    },
+    {
+      "source": "/sales-ops",
+      "destination": "/solutions/sales/sales-ops",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/resources",
+      "permanent": true
+    },
+    {
+      "source": "/advanced-line-item-extraction-the-missing-piece-in-touchless-ap-automation",
+      "destination": "/blog/beyond-header-data-line-item-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/ai-is-changing-ap-fraud-are-you-ready",
+      "destination": "/blog/ai-changing-ap-fraud",
+      "permanent": true
+    },
+    {
+      "source": "/beyond-header-data-why-advanced-line-item-extraction-is-the-future-of-ap-automation",
+      "destination": "/blog/beyond-header-data-line-item-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/drc-releases-are-rolling-out-in-regional-waves-is-your-ap-system-ready",
+      "destination": "/blog/drc-releases-ap-system-ready",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-process-automation-how-does-it-work",
+      "destination": "/blog/what-is-process-automation",
+      "permanent": true
+    }
+  ]
+}
