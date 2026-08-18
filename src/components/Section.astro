@@ -1,0 +1,38 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+  containerClass?: string;
+  inset?: boolean;
+  divider?: boolean;
+  variant?: "dark" | "light";
+}
+
+const {
+  id,
+  class: className = "",
+  containerClass = "",
+  inset = false,
+  divider = true,
+  variant = "dark",
+} = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    "relative scroll-mt-28 py-20 md:py-28",
+    variant === "light" ? "section-light" : "section-dark",
+    inset && "py-0 md:py-0",
+    className,
+  ]}
+>
+  <div class:list={["site-container", containerClass]}>
+    <slot />
+  </div>
+  {divider && !inset && (
+    <div class="site-container mt-20 md:mt-28">
+      <div class="divider" />
+    </div>
+  )}
+</section>

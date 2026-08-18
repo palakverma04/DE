@@ -1,0 +1,24 @@
+---
+import { comparisonRows } from "../../data/site";
+---
+
+<div class="overflow-hidden rounded-xl border border-[hsl(var(--light-border))]" data-reveal>
+  <div class="grid md:grid-cols-2">
+    <div class="border-b border-[hsl(var(--light-border))] bg-[hsl(0_60%_95%)] px-5 py-4 md:border-b-0 md:border-r">
+      <p class="text-xs font-bold uppercase tracking-widest text-[hsl(0_50%_45%)]">Generic AP / Finance Automation</p>
+    </div>
+    <div class="bg-[hsl(var(--light-fg))] px-5 py-4">
+      <p class="text-xs font-bold uppercase tracking-widest text-white">With Decision Engines</p>
+    </div>
+  </div>
+  {comparisonRows.map((row, i) => (
+    <div class="grid border-t border-[hsl(var(--light-border))] md:grid-cols-2">
+      <div class="compare-bad px-5 py-4 md:border-r md:border-[hsl(var(--light-border))]">
+        <p class="text-sm leading-relaxed text-[hsl(var(--light-muted))]">{row.generic}</p>
+      </div>
+      <div class="compare-good px-5 py-4">
+        <p class="text-sm leading-relaxed text-[hsl(var(--light-fg))]" set:html={row.de.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+      </div>
+    </div>
+  ))}
+</div>

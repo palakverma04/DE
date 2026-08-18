@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/ui/PageHero.astro";
+import Section from "../components/Section.astro";
+---
+
+<BaseLayout title="EULA | Decision Engines" description="Decision Engines end user license agreement." canonicalUrl="/eula">
+  <PageHero label="Legal" title="End User License Agreement" variant="light" />
+  <Section variant="light" divider={false}>
+    <div class="prose prose-light mx-auto max-w-3xl" data-reveal>
+      <p><strong>Last updated:</strong> January 2026</p>
+      <p>This End User License Agreement ("EULA") is a legal agreement between you and Decision Engines, Inc. for use of Decision Engines software and services.</p>
+      <h2>License grant</h2>
+      <p>Subject to payment and compliance with this EULA, Decision Engines grants you a limited, non-exclusive, non-transferable license to use the software as specified in your order form.</p>
+      <h2>Restrictions</h2>
+      <ul>
+        <li>You may not reverse engineer, decompile, or disassemble the software</li>
+        <li>You may not sublicense or distribute the software without authorization</li>
+        <li>You may not use the software in violation of applicable law</li>
+      </ul>
+      <h2>Data and deployment</h2>
+      <p>Deployment terms, data residency, and security controls are defined in your master services agreement and order form.</p>
+      <h2>Contact</h2>
+      <p>For licensing questions: <a href="mailto:info@decisionengines.ai">info@decisionengines.ai</a>.</p>
+    </div>
+  </Section>
+</BaseLayout>

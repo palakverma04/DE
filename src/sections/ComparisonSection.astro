@@ -1,0 +1,16 @@
+---
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import ComparisonTable from "../components/ui/ComparisonTable.astro";
+---
+
+<Section variant="light" divider={false}>
+  <SectionHeader
+    label="Comparison"
+    title="What this changes for your finance team"
+    description="The same close process, run two ways."
+    wide
+  />
+
+  <ComparisonTable />
+</Section>

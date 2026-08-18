@@ -1,0 +1,18 @@
+---
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import CTABox from "../components/ui/CTABox.astro";
+---
+
+<Section id="contact" variant="dark" divider={false} class="relative overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 linear-glow opacity-30" aria-hidden="true" />
+  <div class="relative">
+    <SectionHeader
+      label="Get started"
+      title="Agents run your financial operations. Your team owns the decisions."
+      description="From a deep-tech foundation of organization-specific fine-tuning, multi-model orchestration, and sovereign deployment — to production agents that close your books while your team directs the outcome."
+      wide
+    />
+    <CTABox />
+  </div>
+</Section>

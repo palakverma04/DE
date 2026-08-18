@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/ui/Button.astro";
+---
+
+<BaseLayout title="Page Not Found | Decision Engines" description="The page you're looking for doesn't exist." noindex={true}>
+  <section class="section-dark flex min-h-[60vh] items-center py-32">
+    <div class="site-container text-center">
+      <p class="section-label">404</p>
+      <h1 class="heading-display mt-4">Page not found</h1>
+      <p class="body-lg mx-auto mt-4 max-w-md">The page you're looking for doesn't exist or has been moved.</p>
+      <div class="mt-8">
+        <Button href="/" label="Back to home" variant="primary" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

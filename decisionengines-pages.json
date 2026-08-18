@@ -1,0 +1,434 @@
+{
+  "invoice-automation": {
+    "title": "Accounts Payable Automation & Invoice Processing for Enterprise Finance Teams",
+    "description": "AI-driven, enterprise-grade invoice capture, intelligent GL coding, and multi-level approval workflows. Reduce manual processing time and errors \u2014 and achieve 75% touchless invoice processing.",
+    "howItWorks": [
+      "InvoiceIQ orchestrates the entire accounts payable workflow \u2014 from invoice ingestion to approval \u2014 using AI bots that learn and adapt continuously.",
+      "InvoiceIQ works alongside ContractIQ and ConverseIQ to cover your entire finance operation.",
+      "When invoices are complex or fields are unrecognized, InvoiceIQ routes them to an exception queue. Once a business user corrects the data, the AI bots learn from the correction \u2014 continuously improving accuracy without IT involvement.",
+      "InvoiceIQ supports 18+ languages across Asia, Europe, and the Americas. Image-level language detection means invoices no longer need to be sorted by mailbox or BPO. Country-specific date, currency, and amount formats are normalized automatically.",
+      "InvoiceIQ is deployed as a secure SaaS application aligned with SOC 2 Type II standards. Your financial data stays protected at every step."
+    ],
+    "benefits": [
+      "Statement Credits Audits: Automatically identifies and digitizes credit memos from vendor communications, then reconciles and applies them to vendor accounts once approved.",
+      "Auto-Code Invoices & SOWs to GL Accounts: Assigns correct GL account codes to invoices and SOWs. When confidence is low, routes items to an accountant for coding \u2014 ensuring accurate GL classification without disrupting the AP workflow.",
+      "Intelligent Accounts Payable Processing: Digitizes multilingual and multi-format scanned invoices with automated 3-way matching against POs and goods receipts \u2014 minimizing delays, errors, and cash flow disruptions without BPOs.",
+      "Auto-Reply Invoice & Payment Status Queries: Digitizes invoice data, validates against payment dates from master data or contracts, and automatically responds to vendor payment status inquiries.",
+      "Intelligent AP Service Desk: Manages the AP inbox \u2014 understanding vendor requests, auto-responding, and triggering appropriate workflows. Eliminates 90% of errors from duplicate invoices and missed credits.",
+      "AI Risk Scoring & Fraud Detection: Approval risk scoring, intelligent duplicate detection, and contract discovery for non-PO invoices \u2014 alerting approvers to high-risk items before payment.",
+      "Closed-loop learning from every human correction",
+      "Adapts to new vendor formats automatically \u2014 no reconfiguration",
+      "Accuracy improves over time without IT intervention",
+      "Multi-locale: handles country-specific date and amount formats",
+      "Any invoice format: PDF, image, XML, CSV, CXML, XLS, custom",
+      "Elastic auto-scaling handles month-end and quarter-end volume spikes",
+      "Outputs structured data in CSV, CXML, XML, JSON, XLS, or custom formats for downstream ERP and AP systems",
+      "Dedicated VPC and compute infrastructure \u2014 not open to the public internet",
+      "All data encrypted at rest and in-flight",
+      "Shared-nothing deployment \u2014 private cloud and on-premise options available",
+      "Data retention configurable to customer requirements"
+    ],
+    "stats": [
+      "85%+ Accuracy digitizing global paper invoices out of the box",
+      "90% Reduction in payment delays, missed credits & duplicate payments",
+      "75% Touchless invoice processing \u2014 no human intervention required",
+      "AI-driven, enterprise-grade invoice capture, intelligent GL coding, and multi-level approval workflows. Reduce manual processing time and errors \u2014 and achieve 75% touchless invoice processing.",
+      "InvoiceIQ is deployed as a secure SaaS application aligned with SOC 2 Type II standards. Your financial data stays protected at every step.",
+      "Intelligent AP Service Desk: Manages the AP inbox \u2014 understanding vendor requests, auto-responding, and triggering appropriate workflows. Eliminates 90% of errors from duplicate invoices and missed credits."
+    ]
+  },
+  "contract-automation": {
+    "title": "Contract Automation",
+    "description": "Contract Life Cycle & Risk Automation",
+    "howItWorks": [
+      "Contract Life Cycle & Risk Automation",
+      "Migrate Contracts from legacy document stores with intelligent content extraction to modern document stores and CLM systems.",
+      "Digitize existing and new contracts post-signing and create a single searchable store of contracts as well as update key systems with contract performance data.",
+      "Track deviations of clauses and field values from company standards during negotiations to optimize total contract risk.",
+      "Tie key contract field data into other systems such as AP or AR to enforce contractual agreements such as billing rates etc.",
+      "Extract 90% accuracy for standard clauses & fields Decision Engines ContractIQ leverages patented AI and ML Bots to empower business teams, both legal and non-legal, in extracting key elements from contracts. It enables efficient tracking, analysis, and risk management throughout the contract lifecycle. The solution, trained on numerous contracts and legal documents, can automatically extract common clauses and fields from machine-incompatible formats like PDFs and Images. With a 90% accuracy for standard clauses and fields out of the box, it delivers an immediate ROI. Realtime Learning The solution utilizes active learning bot technology to learn custom clauses and fields that business users markup using a highly intuitive UI. This closed-loop learning technology enables rapid improvement in accuracy as well as adapts the solution in real-time to specific customer needs without the intervention of IT teams.",
+      "Decision Engines\u2019 risk scoring bots can be customized to apply rules and AI algorithms for assessing risk, taking into account deviations from standard clauses or specific field ranges. This empowers legal and delivery owners to effectively manage risk without getting overwhelmed by extensive legal jargon and lengthy documents.",
+      "End-To-End Automation By leveraging the wide array of integration bots on the platform alongside the option to create custom bots, users can unlock endless possibilities to achieve desired levels of automation, all within a single unified platform. This not only minimizes project risk but also streamlines the IT landscape, resulting in a simplified and efficient solution.",
+      "Any Document Type Our platform support all formats like TEXT, EXCEL, IMAGE, PDF, WORD from different sources like FTP, GDRIVE, eMail and business applications like Salesforce, Apttus \u2026etc",
+      "Auto Scaling ContractIQ is built on the robust Decision Engines Intelligent Process Automation platform and scales to any volume elastically based on customer needs and SLA guarantee requirements.",
+      "User-friendly Interface ContractIQ features a user-friendly interface, ensuring that users can easily navigate through the system and access the features they need. This results in a smoother experience and faster learning curve for all users, regardless of their technical proficiency."
+    ],
+    "benefits": [
+      "Migrate Contracts from legacy document stores with intelligent content extraction to modern document stores and CLM systems.",
+      "Digitize existing and new contracts post-signing and create a single searchable store of contracts as well as update key systems with contract performance data.",
+      "Track deviations of clauses and field values from company standards during negotiations to optimize total contract risk.",
+      "Tie key contract field data into other systems such as AP or AR to enforce contractual agreements such as billing rates etc."
+    ],
+    "stats": [
+      "Extract 90% accuracy for standard clauses & fields Decision Engines ContractIQ leverages patented AI and ML Bots to empower business teams, both legal and non-legal, in extracting key elements from contracts. It enables efficient tracking, analysis, and risk management throughout the contract lifecycle. The solution, trained on numerous contracts and legal documents, can automatically extract common clauses and fields from machine-incompatible formats like PDFs and Images. With a 90% accuracy for standard clauses and fields out of the box, it delivers an immediate ROI. Realtime Learning The solution utilizes active learning bot technology to learn custom clauses and fields that business users markup using a highly intuitive UI. This closed-loop learning technology enables rapid improvement in accuracy as well as adapts the solution in real-time to specific customer needs without the intervention of IT teams."
+    ]
+  },
+  "converseiq-assistant": {
+    "title": "ConverseIQ",
+    "description": "ConverseIQ serves as a next-generation AI Assistant, focusing on a comprehensive approach to business operations. It harnesses the power of generative AI agents to deliver innovative solutions, changing how businesses strategize and make decisions.",
+    "howItWorks": [
+      "AI-Powered Assistant For Enterprise",
+      "ConverseIQ serves as a next-generation AI Assistant, focusing on a comprehensive approach to business operations. It harnesses the power of generative AI agents to deliver innovative solutions, changing how businesses strategize and make decisions.",
+      "Orchestration : At the core of ConverseIQ\u2019s design is Orchestration. The gen-AI agents connect processes, systems, and knowledge to execute complex tasks seamlessly. This orchestration extends beyond simple task automation. It enables cross-functional collaboration, unifying various business processes and encouraging synergy. Innovation : ConverseIQ is not just about streamlining operations, but it\u2019s also about driving innovation. The gen-AI within ConverseIQ surfaces insights from a vast array of data, previously inaccessible or unutilized. These insights can spark new strategies, leading to breakthrough solutions and novel ways of approaching business problems. Decision-making : ConverseIQ takes decision-making to the next level by embedding generative AI into business systems and pairing it with data. It facilitates businesses in turning their ideas into reality. The AI analyzes the data, makes predictions, and offers recommendations. This empowers businesses to make informed, data-driven decisions and bring their vision to fruition. Unification : ConverseIQ stands for simplification and unification. It replaces today\u2019s myriad interfaces and entry points with a single, intuitive interface. This unified approach lessens the need for multiple platform interactions, streamlining operations, and freeing up valuable time. With ConverseIQ, businesses can optimize their operations, foster innovation, make smarter decisions, and streamline their interfaces all through the power of generative AI. What ConverseIQ Can Do For Your Team Whether your team is a lean operation or a large-scale department, ConverseIQ can revolutionize your workflow. Our platform adapts to the unique needs of each team, providing a tailored approach for optimal results.",
+      "ConverseIQ facilitates the finance team by automating complex tasks, enhancing efficiency and accuracy. The AI-powered assistant is equipped to generate detailed financial reports, simplifying convoluted financial statements, and presenting a lucid picture of your financial status. By identifying and interpreting financial trends, ConverseIQ empowers finance teams to track progress and predict future outcomes with sharper precision.",
+      "procurement ConverseIQ for Procurement Team ConverseIQ is a powerful ally for procurement teams, streamlining operations and enabling more insightful decision-making. The AI assistant aids in supplier selection, contract management, and procurement planning with its advanced analytical capabilities. By providing real-time insights into supplier performance, market trends, and procurement risks, ConverseIQ helps procurement teams optimize their strategies, ultimately delivering better value and efficiency.",
+      "Sales ConverseIQ for Sales Team For sales teams, ConverseIQ is a game-changer. The AI assistant assists in lead prioritization, customer engagement, and sales forecasting, harnessing machine learning to provide actionable insights into customer behavior and market trends. ConverseIQ\u2019s capabilities extend to the crafting of personalized emails and the identification of cross-selling and up-selling opportunities, equipping sales teams to craft more effective strategies and drive revenue growth.",
+      "Our Partners Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "decisioniq-automation": {
+    "title": "DecisionIQ",
+    "description": "Unleash the power of Process Automation and generative AI to transform data into actionable insights.",
+    "howItWorks": [
+      "Process Automation for Enterprise",
+      "Unleash the power of Process Automation and generative AI to transform data into actionable insights.",
+      "Whether your team is a lean operation or a large-scale department, DecisionIQ can revolutionize your workflow. Our platform adapts to the unique needs of each team, providing a tailored approach for optimal results.",
+      "DecisionIQ\u2019s Process Automation tool is a game-changer for finance teams. Powered by advanced AI and machine learning, our tool automates complex manual tasks like data entry and document processing, freeing up valuable time for finance teams to focus on more strategic initiatives. With DecisionIQ, finance teams can access real-time insights into financial trends, market conditions, and customer behavior, enabling them to make smarter decisions that drive business growth. By unifying processes and systems through generative AI orchestration, DecisionIQ streamlines operations and empowers finance",
+      "procurement DecisionIQ for Procurement Team For procurement teams, DecisionIQ\u2019s Process Automation tool streamlines operations and improves decision-making. By automating supplier selection, contract management, and procurement planning, the tool helps procurement teams operate more efficiently. Additionally, DecisionIQ\u2019s tool provides real-time insights into supplier performance and market trends, empowering teams to optimize their strategies. With DecisionIQ, procurement teams can enhance their value delivery and efficiency, driving optimal results for the organization.",
+      "Sales DecisionIQ for Sales Team Sales teams can leverage DecisionIQ\u2019s Process Automation tool to revolutionize their processes. The tool\u2019s AI and machine learning capabilities assist in lead prioritization, customer engagement, and sales forecasting. It can also automate the crafting of personalized emails and identify cross-selling and up-selling opportunities. With DecisionIQ, sales teams can craft more effective strategies, driving revenue growth and enhancing customer satisfaction.",
+      "Our Partners Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "connectors": {
+    "title": "Connectors",
+    "description": "Connect all your existing applications.",
+    "howItWorks": [
+      "Connect all your existing applications.",
+      "Decision Engines Connectors seamlessly integrate your existing applications with our platform, empowering you to leverage the full potential of Decision Engines and its capabilities.",
+      "The Decision Engines Connector allows you to integrate all of your existing applications into the platform, giving you access to the full range of capabilities offered by Decision Engines. This powerful tool streamlines your workflow and enhances collaboration across different systems.",
+      "With the Decision Engines Connector, you can seamlessly connect data from various sources such as databases, cloud storage platforms, and other software programs. This means that you can easily pull relevant information and insights from different tools without having to manually switch between them.",
+      "Moreover, our connectors are highly customizable, allowing you to tailor them according to your specific needs. You can choose which applications or data sources to connect, set up rules for data transfer and synchronization, and automate processes for a more efficient workflow."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "invoice-reconciliation": {
+    "title": "Invoice Reconciliation",
+    "description": "How Invoice Reconciliation Works with DecisionIQ Automation",
+    "howItWorks": [
+      "The process of invoice reconciliation is significantly streamlined with the help of DecisionIQ\u2019s automation capabilities. The system begins by collating all invoices and associated transaction records. Using innovative machine learning and AI technologies, DecisionIQ then matches each invoice with its respective payment record, ensuring that each transaction corresponds correctly with its invoice.",
+      "Anomalies or discrepancies, such as overpayments, underpayments, or unrecorded transactions, are promptly flagged by the system. These irregularities are then reported to the relevant stakeholders for further investigation and resolution. In addition, the AI algorithm learns over time, improving its ability to detect discrepancies and prevent future errors.",
+      "The automation of invoice reconciliation by DecisionIQ not only improves accuracy but also speeds up the process, freeing up valuable time for your finance team. By deploying this AI-driven approach, organizations can manage their finances more effectively, ensuring accurate records, timely payments, and improved cash flow. The result is a more efficient, seamless, and error-resistant reconciliation process, ultimately contributing to your organization\u2019s financial health and stability."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "contract-validation": {
+    "title": "Contract Validation",
+    "description": "How Contract Validation Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Contract validation is another crucial process that is made more efficient and reliable with DecisionIQ\u2019s automation capabilities. The system starts by examining the terms and conditions of each contract, extracting and categorizing the key information using its advanced AI and machine learning algorithms. This includes details such as contract duration, payment terms, deliverables, and any special clauses or conditions.",
+      "The extracted data is then cross-verified against a predefined set of rules and standards, ensuring every aspect of the contract meets your company\u2019s requirements and complies with relevant laws and regulations. Any discrepancies or potential issues are flagged instantly by the system for further review.",
+      "At the same time, DecisionIQ\u2019s AI also compares the proposed contract with similar past contracts, looking for any inconsistencies or unusual terms. This comprehensive, automated validation process not only enhances accuracy and efficiency but also minimizes the risk of entering into unfavourable contracts.",
+      "By integrating DecisionIQ\u2019s contract validation capabilities, businesses can ensure each contract is thoroughly vetted before it is finalized, thereby protecting their interests and contributing towards long-term business success."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "fraud-detection": {
+    "title": "Fraud Detection",
+    "description": "How Fraud Detection Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Detecting potential fraudulent activity becomes a seamless and robust process with the use of the DecisionIQ automation platform. As soon as a digitized invoice is received, the system\u2019s advanced AI technology extracts all pertinent data points, including vendor details, invoice sum, date, and detailed line item descriptions.",
+      "Following the extraction, DecisionIQ\u2019s AI engine rigorously cross-checks the gathered data against a comprehensive set of fraud detection parameters established within the system. These parameters can range from verifying the authenticity of the vendor, cross-validating the invoice amount with the agreed prices, to checking the purchase dates and line items against the approved purchase orders. This rigorous evaluation ensures that all invoicing aligns with established practices and prevents fraudulent activities.",
+      "If the AI engine identifies potential signs of fraud, such as inconsistencies with vendor details, invoice amounts exceeding agreed prices, or dubious line items, these are promptly flagged. The flagged issues are then escalated to the finance or risk management team for immediate investigation. This instant alert system ensures rapid response to potential fraudulent activities, protecting the organization from financial risks and legal complications.",
+      "As the system processes more invoices, the machine learning capabilities of DecisionIQ continually fortify its accuracy in spotting unusual patterns and potential fraudulent activities. This ongoing learning process leads to a more robust and accurate fraud detection process over time.",
+      "By adopting DecisionIQ\u2019s automation platform for fraud detection, organizations can significantly improve their resilience against fraudulent activities, reduce risk-related errors, and enhance financial accuracy. The result is improved financial governance, better risk management, and a robust defense against fraudulent activities."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "lead-scoring": {
+    "title": "Lead Scoring Automation",
+    "description": "How Lead Scoring Works with DecisionIQ Automation",
+    "howItWorks": [
+      "DecisionIQ\u2019s lead scoring leverages machine learning and advanced data analytics to assign scores to your leads, determining their probability of conversion.",
+      "The process begins with the system analyzing historical data of your customers, including their purchase history, interactions with your brand, and behavior patterns. With this data, DecisionIQ trains a predictive model that identifies trends and significant factors contributing to conversions.",
+      "Once the model is trained, it\u2019s applied to your current leads, evaluating them against the identified trends and factors. Each lead is then assigned a score representing their likelihood of becoming a customer.",
+      "This data-driven, automated approach to lead scoring allows your sales team to prioritize their efforts effectively, focusing on leads that are most likely to convert, and thus, optimizing your sales process for maximum efficiency and revenue generation."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "procure-to-pay": {
+    "title": "Procure To Pay",
+    "description": "How Procure-To-Pay Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Procure-to-pay becomes a thoroughly streamlined, efficient, and accurate process when integrated with the DecisionIQ automation platform. As soon as a purchase requisition is received, the platform\u2019s advanced AI technology extracts the necessary data points, such as vendor details, order amount, and detailed item descriptions.",
+      "The AI engine of DecisionIQ then cross-checks these data against a comprehensive set of procurement parameters established within the system. These parameters can include verifying the authenticity of the vendor, validating the order amount with approved budgets, and ensuring the necessity and compliance of the items requested. This rigorous process ensures that all procurement aligns with the organization\u2019s procurement policies and budgetary guidelines.",
+      "Any potential irregularities, such as discrepancies between order amounts and budgets, questionable vendor credibility, or requests for non-compliant items, are immediately flagged by the AI engine. These flagged issues are swiftly escalated to the procurement or finance team for further investigation, ensuring that procurement activities adhere to internal policies and budgetary constraints.",
+      "As more purchase requisitions are processed, the machine learning capabilities of DecisionIQ continually enhance its accuracy in procurement checks and discrepancy identification. This ongoing learning process leads to an increasingly efficient and accurate procure-to-pay process over time.",
+      "By implementing DecisionIQ\u2019s automation platform for the procure-to-pay process, organizations can significantly improve their efficiency, reduce procurement-related errors, and enhance financial accuracy. The end result is a more streamlined procurement process, improved operational control, and optimized budget management."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "cash-reconciliation": {
+    "title": "Cash Reconciliation",
+    "description": "Cash reconciliation becomes effortless and more precise with DecisionIQ\u2019s automation platform. The system kick-starts the process by assembling all cash transactions, including sales, purchases, and expenditures. Leveraging its cutting-edge AI and machine learning capabilities, DecisionIQ then verifies each transaction, ensuring that the recorded cash inflows and outflows align with actual bank and cash account balances.",
+    "howItWorks": [
+      "Cash reconciliation becomes effortless and more precise with DecisionIQ\u2019s automation platform. The system kick-starts the process by assembling all cash transactions, including sales, purchases, and expenditures. Leveraging its cutting-edge AI and machine learning capabilities, DecisionIQ then verifies each transaction, ensuring that the recorded cash inflows and outflows align with actual bank and cash account balances.",
+      "The system swiftly identifies and flags any discrepancies, such as missing transactions, duplicate entries, or discrepancies in recorded values. These irregularities are instantly reported to the financial team for detailed review and rectification. As the system continually learns from these discrepancies, it enhances its capacity to detect and prevent errors, thereby improving the accuracy of future reconciliations.",
+      "The DecisionIQ platform\u2019s automation of cash reconciliation processes not only increases precision but also accelerates the process, freeing up valuable time for your finance team to focus on strategic tasks. By adopting this AI-driven approach, organizations can maintain accurate financial records, ensuring the integrity of their financial reporting. This leads to more effective cash management and ultimately contributes to increased financial stability and robustness for the business."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "cfo-2": {
+    "title": "Chief Finance Officer",
+    "description": "ConverseIQ empowers CFOs to access valuable financial insights with ease and efficiency, saving valuable time and effort while ensuring utmost accuracy.",
+    "howItWorks": [
+      "ConverseIQ empowers CFOs to access valuable financial insights with ease and efficiency, saving valuable time and effort while ensuring utmost accuracy.",
+      "ConverseIQ provides a robust suite of features tailored to meet the intricate needs of CFOs, enhancing their decision-making capabilities with data-driven insights and advanced AI technology."
+    ],
+    "benefits": [
+      "Income Statement, Balance Sheet, Cash Flow Statement: ConverseIQ simplifies the analysis of key financial statements, facilitating a clear understanding of the company\u2019s financial health.",
+      "Budget vs. Actuals Comparison: The system aids in comparing budgeted figures with actuals, highlighting areas of concern and facilitating proactive measures.",
+      "Financial Ratios and KPIs, Trend Analysis: With AI, the CFO can observe financial trends and ratios over time, allowing for data-driven decision-making.",
+      "Working Capital Trends, Debt and Equity Mix: It provides insights into the company\u2019s working capital trends and the mix of debt and equity, critical for financial planning.",
+      "Revenue Breakdown by Segment or Product Line: Enables a granular view of revenue, offering a breakdown by segment or product line for targeted strategies.",
+      "Return on Investment (ROI) Analysis: ConverseIQ assists in evaluating the ROI of different investments, aiding strategic allocation of resources.",
+      "Financial Forecast and Projections: The system leverages AI to create accurate financial forecasts and projections, shaping the organization\u2019s future strategies.",
+      "Geographic Revenue Distribution: The system provides insights into revenue distribution by geography, enabling the CFO to understand market performance across regions.",
+      "Risk and Compliance Metrics: The platform assists in tracking risk and compliance metrics, ensuring the organization meets its legal obligations."
+    ],
+    "stats": []
+  },
+  "finance-manager": {
+    "title": "Finance Manager",
+    "description": "ConverseIQ empowers Finance Managers with real-time insights, streamlined financial operations, and advanced AI capabilities. It transforms complex financial data into strategic decisions aligned with organizational objectives.",
+    "howItWorks": [
+      "As a Finance Manager, you can harness the powerful AI-driven features of ConverseIQ. This will enable you to effortlessly convert intricate financial data into strategic decisions, streamline financial operations, and efficiently achieve your organization\u2019s objectives."
+    ],
+    "benefits": [
+      "Financial Management: ConverseIQ empowers Finance Managers with real-time insights, streamlined financial operations, and advanced AI capabilities. It transforms complex financial data into strategic decisions aligned with organizational objectives.",
+      "Finance Planning & Analysis: ConverseIQ facilitates a comprehensive analysis of financial plans, highlighting key patterns and trends, empowering managers to make informed decisions.",
+      "Cash Flow Management: ConverseIQ simplifies the management of cash flows, enabling effective tracking of all inflows and outflows and providing timely alerts for potential cash flow problems.",
+      "Financial Reporting & Analysis: The platform enables comprehensive financial reporting and in-depth analysis, turning complex data into easily understandable information.",
+      "Financial Accounting & Recordkeeping: The system ensures accurate accounting and recordkeeping, reducing the risk of errors and facilitating efficient financial management.",
+      "Audit Coordination: ConverseIQ simplifies the audit process by providing organized and accurate financial records, ensuring seamless coordination with auditors.",
+      "Treasury Management: The platform aids in managing the company\u2019s financial operations, liquidity, and investment strategies, providing insights into optimal treasury management.",
+      "Tax Planning And Compliance: The system aids in effective tax planning, ensuring compliance with tax regulations and optimizing tax strategies.",
+      "Capital Expenditure Management: With ConverseIQ, Finance Managers can effectively manage capital expenditures, aligning them with the organization\u2019s objectives."
+    ],
+    "stats": []
+  },
+  "cpo": {
+    "title": "Chief Procurement Officer",
+    "description": "ConverseIQ empowers CFOs to access valuable financial insights with ease and efficiency, saving valuable time and effort while ensuring utmost accuracy.",
+    "howItWorks": [
+      "ConverseIQ provides a robust suite of features tailored to meet the intricate needs of CFOs, enhancing their decision-making capabilities with data-driven insights and advanced AI technology."
+    ],
+    "benefits": [
+      "Procurement Oversight: ConverseIQ empowers CFOs to access valuable financial insights with ease and efficiency, saving valuable time and effort while ensuring utmost accuracy.",
+      "Contract Review and Analysis, Risk Assessment and Mitigation: The platform provides tools for comprehensive contract review and analysis, identifying potential risks and suggesting mitigation strategies. This results in effective risk management and contract compliance.",
+      "Contract Performance Evaluation, Issue Resolution: ConverseIQ helps evaluate contract performance, resolve issues, and manage relationships by providing insights on supplier performance and contract adherence. Strengthening supplier relationships and driving procurement success.",
+      "Contract Renewal and Termination, Cost Management: Streamlines the contract renewal and termination process, and aids in cost management by providing insights into cost performance across the contract lifecycle.",
+      "Contract Negotiation: ConverseIQ prepares negotiation strategies by combining internal data with external market data, enabling CPOs to negotiate effectively with suppliers and achieve optimal contract terms.",
+      "Compliance Monitoring, Contract Administration: With its automated compliance monitoring feature, ConverseIQ ensures adherence to contractual obligations, legal standards, and regulatory requirements, thus simplifying contract administration.",
+      "Reporting and Documentation, Legal and Regulatory Compliance: Advanced reporting and documentation features to ensure transparent and well-documented procurement activities. It also ensures compliance by staying up-to-date with legal and regulatory standards."
+    ],
+    "stats": []
+  },
+  "cro": {
+    "title": "Chief Revenue Officer",
+    "description": "Harness the power of AI-driven assistants to empower the Chief Revenue Officer. Unlock real-time, data-driven sales strategies to fuel growth and enhance profitability.",
+    "howItWorks": [
+      "DecisionIQ is a cutting-edge AI platform that empowers the Chief Revenue Officer (CRO) with data-guided RFP responses, lead prioritization, cross-sell and up-sell recommendations, and hyper-personalized email crafting. Its goal is to maximize revenue growth and operational efficiency."
+    ],
+    "benefits": [
+      "Close More Deals: Harness the power of AI-driven assistants to empower the Chief Revenue Officer. Unlock real-time, data-driven sales strategies to fuel growth and enhance profitability.",
+      "Revenue Growth in the Quarter: Detailed Overview: Get a detailed view of the revenue growth achieved in the quarter. It includes the total revenue generated, the percentage growth compared to the previous quarter, and the key factors contributing to this growth.",
+      "Sales by Product Category: In-depth Analysis: Analyzing sales data by product category to gain insights on top performers, significant growth, and areas needing strategic intervention.",
+      "Sales Pipeline Funnel: Review and Optimizations: Pipeline funnel analysis identifies stages in the sales process where leads are converted or lost. Using these findings, we suggest optimization strategies to improve conversion rates at each stage.",
+      "Monthly Recurring Revenue (MRR) and Annual Recurring Revenue (ARR) Growth Chart: Get a detailed perspective of our recurring revenue growth on a monthly and annual basis. These indicators are crucial for assessing our business\u2019s health, stability, and long-term growth trajectory.",
+      "Marketing Channel ROI Bar Chart: Maximizing Marketing Efficiency: Compares the return on investment (ROI) from different marketing channels. It allows us to identify the most effective channels and allocate marketing resources more efficiently.",
+      "Competitive Landscape Radar Chart: Understanding our Position: A competitive landscape radar chart compares our performance with competitors across key metrics. It shows our market position and helps identify areas for differentiation and competitive advantage",
+      "Customer Segmentation Pie Chart: Insights and Implications: Obtain in-depth customer distribution insights. This chart will guide our marketing and sales efforts by customizing strategies for each segment\u2019s unique needs and preferences.",
+      "Customer Satisfaction Trends Line Chart: Tracking Progress and Identifying Challenges: Create line chart tracks customer satisfaction over time. It helps us monitor our progress in maintaining high levels of satisfaction and quickly identify and address any emerging challenges.",
+      "Sales Territory Heat Map: Identifying Hotspots and Opportunities: Create a heat map diagram to visualize sales performance across regions or territories. It identifies \u2018hotspots\u2019 of high sales activity and areas with untapped opportunities for expansion or improvement."
+    ],
+    "stats": []
+  },
+  "about-2": {
+    "title": "About",
+    "description": "The forefront platform for Finance operations powered by AI technology.",
+    "howItWorks": [
+      "Decision Engines is a globally recognized software company, renowned for its expertise in delivering an advanced self-service cloud platform driven by cutting-edge technology. Our AI platform seamlessly automates end-to-end processes, eliminating the need for manual tasks and harnessing the power of artificial intelligence to enable autonomous decision-making. Through our innovative solutions, we empower businesses to streamline operations, enhance efficiency, and achieve remarkable outcomes.",
+      "At Decision Engines, we are more than just a technology company. We are a team of visionary innovators and passionate problem-solvers dedicated to harnessing the power of artificial intelligence to transform the way businesses function."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "invoice-digitization": {
+    "title": "Invoice Digitization",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Procurement Invoice Digitization How Invoice Digitization Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Digitizing invoices becomes a seamless process with the facilities offered by DecisionIQ's automation platform. The process commences with the scanning and digitizing of physical invoices using advanced AI and Optical Character Recognition (OCR) technology. This technology captures all necessary data points such as vendor details, invoice amount, date, and line item descriptions, converting these into a digital format that can be easily processed.",
+      "Once the data is digitized, DecisionIQ's AI checks each digitized invoice for accuracy and completeness. It verifies the data against the information in the platform's database, ensuring that every piece of information matches with the original paper invoice. The AI flags any discrepancies for review, enabling timely correction and preventing errors in invoice processing.",
+      "The system also categorizes each invoice according to its type, such as purchase invoices, sales invoices, tax invoices, and so on. This categorization aids in better invoice management and faster processing. Furthermore, the digitization process enables easy retrieval and storage of invoices, making audits and compliance checks more efficient.",
+      "Over time, the AI within DecisionIQ's system learns from every invoice it processes, enhancing its accuracy and efficiency. This continual learning process leads to improved digitization capabilities, making the process faster and more accurate with each invoice processed.",
+      "By leveraging DecisionIQ's powerful automation platform, organizations can transform their invoice processing function, making it more efficient, accurate, and timely. This leads to improved financial control, increased productivity, and enhanced compliance.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "invoice-po-reconciliation": {
+    "title": "Invoice PO Reconciliation",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Procurement Invoice PO Reconciliation How Invoice PO Reconciliation Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Invoice and Purchase Order (PO) reconciliation is made simple and efficient with the DecisionIQ automation platform. The process commences when a digitized invoice enters the system. The platform's advanced AI technology first identifies and extracts all essential data points from the invoice, such as vendor details, invoice amount, date, and line item descriptions.",
+      "Following this, DecisionIQ's AI engine automatically matches the critical data from the invoice with corresponding POs within the system. It compares details such as vendor information, item descriptions, quantities, and pricing against the initially issued PO. This comprehensive comparison provides an automated check to ensure the products or services billed are in line with those ordered.",
+      "In the event of discrepancies, the AI engine promptly flags these up for review. This could include mismatched quantities, incorrect pricing, or charges for items not included in the original PO. The flagged discrepancies are then brought to the attention of the finance team for further investigation and resolution.",
+      "As the system processes more invoices, DecisionIQ's machine learning capabilities gradually enhance its accuracy in matching and identifying discrepancies. This continuous learning process facilitates a more efficient and accurate reconciliation process over time.",
+      "By employing DecisionIQ's automation capabilities for Invoice PO reconciliation, organizations can significantly improve their efficiency, reduce manual errors, and enhance financial accuracy. The end result is improved procurement processes, strengthened vendor relationships, and enhanced operational control.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "service-invoice-validation": {
+    "title": "Service Invoice Validation",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Procurement Service Invoice Validation How Service Invoice Validation Works with DecisionIQ Automation",
+    "howItWorks": [
+      "The validation of service invoices becomes a streamlined and efficient process with the DecisionIQ automation platform. The process initiates as soon as a digitized service invoice enters the system. The platform's superior AI technology extracts all necessary data points from the invoice, including vendor details, invoice amount, date, and description of service provided.",
+      "Upon extraction, the AI engine of DecisionIQ automatically validates the crucial data from the service invoice against the corresponding Service Orders (SOs) and contracts in the system. The AI compares all aspects, including vendor information, service descriptions, and pricing against the initially issued SOs and existing contracts. This ensures that the services billed align with those ordered and agreed upon in terms of cost.",
+      "Should there be any discrepancies, such as mismatched service descriptions, incorrect pricing, or charges for services not included in the original SO or contract, the AI engine promptly flags these for review. These flagged discrepancies are then addressed promptly by the finance or service management team, ensuring accurate billing and preventing potential financial losses.",
+      "Over time, as DecisionIQ's platform processes more service invoices, its machine learning capabilities continually improve its accuracy in validation and discrepancy identification. This ongoing learning process leads to a more refined and accurate validation process over time.",
+      "By integrating DecisionIQ's automation platform for Service Invoice Validation, organizations can significantly improve their efficiency, reduce manual errors, and enhance financial accuracy. This integration leads to smoother service management, improved vendor relationships, and better financial control.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "invoice-compliance": {
+    "title": "Invoice Compliance",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Procurement Invoice Compliance How Invoice Compliance Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Ensuring invoice compliance becomes an effortless and streamlined process with the DecisionIQ automation platform. As soon as a digitized invoice is received, the platform's advanced AI technology extracts all relevant data points, including vendor details, invoice amount, date, and detailed descriptions.",
+      "Next, the AI engine of DecisionIQ assesses the extracted data against a comprehensive list of compliance rules and regulations set within the system. These could include ensuring correct tax calculations, adherence to pricing agreements, or validating the legitimacy of the vendor. This comprehensive comparison ensures that all invoicing aligns with company policies and external regulatory requirements.",
+      "If any potential compliance issues are identified, such as irregularities in tax calculations, inconsistencies with pricing agreements or questionable vendor information, the AI engine immediately flags these for review. The finance or compliance team is then alerted to investigate these flagged discrepancies promptly, ensuring adherence to all compliance requirements and safeguarding the company against potential financial and legal risks.",
+      "As more invoices are processed, DecisionIQ's machine learning capabilities continually enhance its accuracy in compliance checks and discrepancy identification. This ongoing learning process leads to a more robust and accurate compliance process over time.",
+      "By utilizing DecisionIQ's automation platform for invoice compliance, organizations can significantly improve their efficiency, reduce compliance-related errors, and enhance financial accuracy. This application of automation results in better financial governance, improved risk management, and robust compliance controls.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "invoice-approval-risk": {
+    "title": "Invoice Approval Risk",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Procurement Invoice Approval Risk How Invoice Approval Risk Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Mitigating approval risk becomes a systematic and well-orchestrated process when leveraging the DecisionIQ automation platform. Upon receipt of a digitized invoice, the platform's cutting-edge AI technology extracts all necessary data points, including vendor details, invoice amount, date, and unique line item descriptions.",
+      "The AI engine of DecisionIQ then meticulously assesses the extracted data against a set of pre-established approval criteria within the system. These criteria could range from ensuring the invoice amount doesn't exceed the budget, verifying the vendor's credibility, to confirming the necessity of the goods or services invoiced. This meticulous evaluation ensures that all invoices that proceed to the approval stage meet the necessary quality standards and compliance rules.",
+      "Should any potential risks or red flags be identified, such as invoices that exceed budget constraints, questionable vendor credibility, or invoices for non-essential goods or services, the AI engine immediately flags these for review. The flagged concerns are then swiftly relayed to the finance or procurement team for further investigation. This prompt action aids in mitigating approval risks, thereby preventing unnecessary expenses and potential financial losses.",
+      "As the platform processes more invoices, DecisionIQ's machine learning capabilities continually refine its accuracy in risk assessment and flagging potential issues. This constant learning process leads to an increasingly efficient and accurate invoice approval process over time.",
+      "By leveraging DecisionIQ's automation platform for invoice approval, organizations can significantly improve their efficiency, reduce approval-related risks, and enhance financial accuracy. The end result is a more streamlined invoice approval process, improved financial control, and optimized budget management.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "risk-management": {
+    "title": "Risk Management",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Finance Risk Management How Risk Management Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Risk management is crucial in maintaining the financial stability of any organization, and this process is considerably enhanced with the help of DecisionIQ's automation platform. The system commences by identifying and categorizing potential risks, making use of its advanced AI and machine learning algorithms. This includes various types of risks such as market risks, credit risks, operational risks, and regulatory compliance risks, among others.",
+      "The identified risks are then evaluated based on their potential impact and the likelihood of their occurrence. Using its sophisticated algorithm, the system also predicts potential future risks by analyzing historical data and identifying patterns and trends.",
+      "Any detected risks or potential threats are promptly flagged by the system, allowing your organization to take proactive measures to mitigate them. Additionally, the system generates comprehensive risk reports, providing your team with a clear overview of the risk landscape and aiding in strategic decision-making.",
+      "The automation of risk management by DecisionIQ not only enhances the efficiency of the process but also increases the accuracy of risk identification and evaluation. By incorporating DecisionIQ's risk management capabilities, organizations can better anticipate and manage risks, ensuring business continuity and contributing to long-term success.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "accounting-policies": {
+    "title": "Accounting Policies",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Finance Accounting Policies How Accounting Policies Works with DecisionIQ Automation",
+    "howItWorks": [
+      "The application of accounting policies is significantly streamlined with the power of DecisionIQ's automation platform. The system begins by comprehensively understanding your organization's specific accounting policies, utilizing its sophisticated AI and machine learning algorithms. These policies may span across different areas, including revenue recognition, expense reporting, asset depreciation, and more.",
+      "Once the policies are integrated into the platform, DecisionIQ's AI ensures all financial transactions and reports comply with these established guidelines. It automatically checks for adherence to the policies during every transaction entry and financial report generation, swiftly detecting any deviations or inconsistencies.",
+      "Not only does the system detect non-compliance, but it also promptly flags these instances, bringing them to the attention of the finance team for rectification. Moreover, the system's learning algorithms adapt over time, continually refining the process of policy compliance check to increase accuracy and efficiency.",
+      "By incorporating DecisionIQ's capabilities in managing accounting policies, organizations can ensure their financial operations are always in line with established protocols. This not only enhances the integrity of financial reporting but also reduces the risk of non-compliance, ultimately driving enhanced financial performance and governance.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "paper-invoice-to-purchase-order": {
+    "title": "Paper Invoice / Purchase Order",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Finance Paper Invoice / Purchase Order How Paper Invoice / Purchase Order Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Paper invoice processing transforms into a more efficient, streamlined operation with DecisionIQ\u2019s automation platform. The system initiates the process by scanning and digitizing paper invoices, using advanced AI and optical character recognition (OCR) technology. This process captures all relevant data, such as vendor details, invoice amount, date, and line item information, converting it into a digital format for easy processing.",
+      "Following this, DecisionIQ's AI matches the digitized invoice data with corresponding purchase orders and receipt data already in the system. This automated three-way match verifies the accuracy and validity of each invoice, ensuring that it aligns with the initial purchase order and received goods or services.",
+      "In the event of discrepancies, such as mismatched amounts or unaccounted goods or services, the system instantly flags these for review by the finance team. This allows for prompt resolution of issues, preventing errors, and potential financial losses.",
+      "Over time, DecisionIQ's machine learning capabilities enhance its ability to process and match invoices, learning from every discrepancy it encounters. This continual learning process improves the accuracy and efficiency of future invoice processing.",
+      "Incorporating DecisionIQ's automated invoice processing capabilities can significantly reduce manual effort, reduce error rates, accelerate processing times, and enhance financial accuracy. This leads to efficient invoice management, improved vendor relationships, and robust financial control.",
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "rfp-automation": {
+    "title": "RFP Automation",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Sales RFP Automation How RPF Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "sales-cross-sell": {
+    "title": "Cross-Sell Recommendations",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Sales Cross-Sell Recommendations How Cross-Sell Recommendations Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "sales-up-sell": {
+    "title": "Up-Sell Opportunities",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu DecisionIQ for Sales Up-Sell Opportunities How Up-Sell Opportunities Works with DecisionIQ Automation",
+    "howItWorks": [
+      "Our Partners include top-tier technology companies who value the transformative power of AI in driving innovation, efficiency, and strategic decision-making."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "sales-ops": {
+    "title": "Sales Ops / Managers",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu Solutions",
+    "howItWorks": [
+      "Identify high-value leads, craft personalized outreach strategies, enhance customer relationships, and streamline sales processes for improved conversions and increased revenue growth",
+      "Utilize ConverseIQ's powerful combination of advanced AI, robust analytics, and efficient sales tools to revolutionize your sales operations. Achieve optimized lead generation, personalized customer outreach, enhanced relationship building, and significant top-line growth.",
+      "Measure Sales Activity Track and analyze your proposal's performance with ConverseIQ's comprehensive analytics. Gain valuable insights and make data-driven decisions to improve success rates and craft impactful proposals in the future.",
+      "Qualify Inbound Leads Leverage ConverseIQ's advanced lead scoring system to assess inbound leads effectively. Analyze various factors for valuable insights and prioritize follow-up actions. Maximize conversions and drive business growth by allocating resources efficiently.",
+      "Personalized Outreach Aligning your outreach with your prospects' interests and needs can boost their engagement. Leverage ConverseIQ's AI-powered insights to create hyper-personalized emails for a more impactful connection",
+      "ConverseIQ is able to provide valuable competitive landscape insights to highlight the uniqueness and superiority of your proposal. Understand the market dynamics and position your offering as the top choice in the industry.",
+      "Create New Sales Proposal Develop sales materials using customized templates, pitch books, and presentations. Forge meaningful connections with prospective clients and masterfully articulate the unique value that your offerings bring to the table."
+    ],
+    "benefits": [],
+    "stats": []
+  },
+  "contract-manager": {
+    "title": "Contract Manager",
+    "description": "InvoiceIQ Contract Automation ConverseIQ DecisionIQ Connectors Solutions Expand Finance Expand PROCESSES &#8211; Invoice Reconciliation &#8211; Contract Validation &#8211; Cash Reconciliation &#8211; Risk Management &#8211; Accounting Policies &#8211; Paper Invoice To PO TEAM &#8211; CFO &#8211; Finance Manager Procurement Expand PROCESSES &#8211; Invoice Digitization &#8211; Invoice PO Reconciliation &#8211; Service Invoice Validation &#8211; Invoice Compliance &#8211; Invoice Approval Risk &#8211; Procure-To-Pay &#8211; Fraud Detection TEAM &#8211; CPO &#8211; Contract Manager Sales Expand PROCESSES &#8211; Lead Scoring &#8211; RFP &#8211; Cross-Sell &#8211; Up-Sell TEAM &#8211; CRO &#8211; Sales Ops / Manager Industries Resources Company Get A Demo Toggle Menu Solutions",
+    "howItWorks": [
+      "ConverseIQ offers extensive support to Contract Managers by orchestrating a range of features that streamline contract management processes.",
+      "ConverseIQ provides a robust platform that leverages AI to simplify contract analysis, ensure compliance, and optimize contract lifecycle management, thereby mitigating risks and maximizing operational efficiency.",
+      "Contract Creation Contract Managers can leverage ConverseIQ's ability to generate contract drafts using historical and industry benchmark data. This significantly reduces time spent on manual contract creation and ensures the contracts align with organizational objectives.",
+      "Contract Review, Risk Assessment, and Mitigation Conduct comprehensive contract reviews and risk assessments. The platform identifies potential risks and suggests effective mitigation strategies to ensure contract compliance and effective risk management.",
+      "Contract Administration and Compliance Monitoring ConverseIQ simplifies contract administration by automating compliance monitoring. This ensures adherence to contractual obligations, legal standards, and regulatory requirements, thereby relieving Contract Managers from the burden of constant manual monitoring.",
+      "Contract Negotiation ConverseIQ prepares negotiation strategies by combining internal data with external market data, enabling CPOs to negotiate effectively with suppliers and achieve optimal contract terms.",
+      "Contract Renewal, Termination, and Cost Management With ConverseIQ, Contract Managers can streamline the process of contract renewal and termination. The tool also provides cost performance insights throughout the contract lifecycle, aiding in effective cost management."
+    ],
+    "benefits": [],
+    "stats": []
+  }
+}

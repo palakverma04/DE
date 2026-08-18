@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/ui/PageHero.astro";
+import Section from "../components/Section.astro";
+---
+
+<BaseLayout title="Privacy Policy | Decision Engines" description="Decision Engines privacy policy." canonicalUrl="/privacy">
+  <PageHero label="Legal" title="Privacy Policy" variant="light" />
+  <Section variant="light" divider={false}>
+    <div class="prose prose-light mx-auto max-w-3xl" data-reveal>
+      <p><strong>Last updated:</strong> January 2026</p>
+      <p>Decision Engines, Inc. ("Decision Engines," "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+      <h2>Information we collect</h2>
+      <p>We may collect personal information you provide directly, such as name, email address, company name, and messages submitted through contact forms. We also collect usage data through cookies and analytics tools.</p>
+      <h2>How we use your information</h2>
+      <ul>
+        <li>To respond to inquiries and provide requested services</li>
+        <li>To improve our website and platform</li>
+        <li>To send relevant communications with your consent</li>
+        <li>To comply with legal obligations</li>
+      </ul>
+      <h2>Data sovereignty</h2>
+      <p>Our platform is designed for sovereign deployment. Customer data processed through production deployments remains under customer control per contractual terms.</p>
+      <h2>Contact</h2>
+      <p>For privacy inquiries, contact <a href="mailto:info@decisionengines.ai">info@decisionengines.ai</a>.</p>
+    </div>
+  </Section>
+</BaseLayout>

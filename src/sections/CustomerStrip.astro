@@ -1,0 +1,34 @@
+---
+import LogoMarquee from "../components/ui/LogoMarquee.astro";
+import { customerLogos } from "../data/customers";
+---
+
+<div class="customer-strip" aria-label="Decision Engines customers">
+  <p class="customer-strip-label">Trusted by finance teams at</p>
+  <LogoMarquee logos={customerLogos} tone="light" speed={36} customerContext={true} />
+</div>
+
+<style>
+  .customer-strip {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid hsl(var(--light-border));
+  }
+
+  @media (min-width: 768px) {
+    .customer-strip {
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .customer-strip-label {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: hsl(var(--light-muted));
+  }
+</style>

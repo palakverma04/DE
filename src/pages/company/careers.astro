@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/ui/PageHero.astro";
+import Section from "../../components/Section.astro";
+import Button from "../../components/ui/Button.astro";
+
+const openings = [
+  {
+    title: "Senior ML Engineer",
+    location: "Remote / Bay Area",
+    team: "Engineering",
+  },
+  {
+    title: "Enterprise Solutions Architect",
+    location: "Remote",
+    team: "Customer Success",
+  },
+  {
+    title: "AP Automation Specialist",
+    location: "Remote",
+    team: "Product",
+  },
+];
+---
+
+<BaseLayout
+  title="Careers | Decision Engines"
+  description="Join Decision Engines and build agentic financial operations for global enterprises."
+  canonicalUrl="/company/careers"
+>
+  <PageHero
+    label="Careers"
+    title="Build the future of agentic finance"
+    description="We're hiring engineers, architects, and finance domain experts who want to ship production AI — not demos."
+    variant="light"
+  />
+
+  <Section variant="light" divider={false}>
+    <div class="space-y-4">
+      {openings.map((job, i) => (
+        <div class="card-light flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between" data-reveal data-reveal-delay={String(i + 1)}>
+          <div>
+            <h2 class="heading-card">{job.title}</h2>
+            <p class="body-md mt-1">{job.team} · {job.location}</p>
+          </div>
+          <Button href="/company/contact" label="Apply" variant="outline-light" />
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

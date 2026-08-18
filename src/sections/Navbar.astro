@@ -1,0 +1,162 @@
+---
+import { isNavActive, navLinkClass, mobileNavLinkClass } from "../utils/nav";
+import { mainNav, solutionMegaGroups } from "../data/nav";
+import { siteConfig } from "../data/site";
+
+const pathname = Astro.url.pathname;
+---
+
+<div class="fixed inset-x-0 top-0 z-50">
+  <header class="site-header border-b border-white/10 bg-[#0B192E]">
+    <div class="site-container flex h-16 items-center justify-between">
+      <a href="/" class="block shrink-0 text-white opacity-90 transition-opacity hover:opacity-100" aria-current={pathname === "/" ? "page" : undefined}>
+        <img src="/logo-white.png" alt={siteConfig.name} width="167" height="50" class="h-[26px] w-auto md:h-[28px]" />
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
+        {mainNav.map((item) =>
+          item.type === "dropdown" ? (
+            <div class="nav-dropdown relative">
+              <button
+                type="button"
+                class="nav-link inline-flex items-center gap-1"
+                aria-haspopup="true"
+              >
+                {item.label}
+                <svg class="h-3 w-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class:list={["mega-menu-panel", item.mega ? "w-[520px] -translate-x-1/4" : "w-52"]}>
+                <div class="rounded-xl border border-white/[0.08] bg-[hsl(216_45%_14%)] p-2 shadow-2xl">
+                  {item.mega ? (
+                    <div class="grid grid-cols-3 gap-1 p-1">
+                      {solutionMegaGroups.map((group) => (
+                        <div class="px-2 py-1">
+                          <a
+                            href={group.href}
+                            class="mega-menu-group-link"
+                          >
+                            {group.label}
+                          </a>
+                          {group.links.map((link) => (
+                            <a
+                              href={link.href}
+                              class="mega-menu-link"
+                              aria-current={isNavActive(pathname, link.href) ? "page" : undefined}
+                            >
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    item.links.map((link) => (
+                      <a
+                        href={link.href}
+                        class="mega-menu-item-link"
+                        aria-current={isNavActive(pathname, link.href) ? "page" : undefined}
+                      >
+                        {link.label}
+                      </a>
+                    ))
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class={navLinkClass(pathname, item.href)}
+              aria-current={isNavActive(pathname, item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          )
+        )}
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="/company/contact" class="btn-primary px-4 py-2 text-[13px]">Book a Demo</a>
+      </div>
+
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="lg:hidden flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Open menu"
+      >
+        <svg id="menu-icon-open" class="h-[18px] w-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="menu-icon-close" class="h-[18px] w-[18px] hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden lg:hidden border-t border-white/[0.06] max-h-[70vh] overflow-y-auto" aria-label="Mobile navigation">
+      <div class="site-container flex flex-col gap-1 py-4">
+        {mainNav.map((item) =>
+          item.type === "dropdown" ? (
+            <div class="mb-2">
+              <p class="px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{item.label}</p>
+              {item.mega
+                ? solutionMegaGroups.map((group) => (
+                    <div class="mb-2 px-2">
+                      <a href={group.href} class={mobileNavLinkClass(pathname, group.href)}>{group.label}</a>
+                      {group.links.slice(0, 3).map((link) => (
+                        <a href={link.href} class="mobile-nav-link block py-2 pl-6 text-sm">{link.label}</a>
+                      ))}
+                    </div>
+                  ))
+                : item.links.map((link) => (
+                    <a href={link.href} class={mobileNavLinkClass(pathname, link.href)}>{link.label}</a>
+                  ))}
+            </div>
+          ) : (
+            <a href={item.href} class={mobileNavLinkClass(pathname, item.href)}>{item.label}</a>
+          )
+        )}
+        <a href="/company/contact" class="mobile-nav-link btn-primary mt-3 justify-center py-2.5 text-sm">Book a Demo</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById("mobile-menu-btn");
+    var menu = document.getElementById("mobile-menu");
+    var iconOpen = document.getElementById("menu-icon-open");
+    var iconClose = document.getElementById("menu-icon-close");
+    if (!btn || !menu) return;
+
+    function closeMenu() {
+      menu.classList.add("hidden");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+      iconOpen.classList.remove("hidden");
+      iconClose.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function openMenu() {
+      menu.classList.remove("hidden");
+      btn.setAttribute("aria-expanded", "true");
+      btn.setAttribute("aria-label", "Close menu");
+      iconOpen.classList.add("hidden");
+      iconClose.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    btn.addEventListener("click", function () {
+      menu.classList.contains("hidden") ? openMenu() : closeMenu();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.classList.contains("hidden")) closeMenu();
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+  })();
+</script>

@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/ui/PageHero.astro";
+import Section from "../components/Section.astro";
+import Button from "../components/ui/Button.astro";
+import BlogGrid from "../components/ui/BlogGrid.astro";
+import CustomerLogoMarquee from "../components/ui/CustomerLogoMarquee.astro";
+---
+
+<BaseLayout
+  title="Resources | Decision Engines"
+  description="Operations insights on AP automation, contract intelligence, compliance, and enterprise AI."
+  canonicalUrl="/resources"
+>
+  <PageHero
+    label="Resources"
+    title="Operations insights"
+    description="Articles on touchless AP, fraud detection, DRC compliance, and agentic automation — for finance and procurement teams shipping in production."
+    variant="light"
+  />
+
+  <Section variant="light" divider={false} class="!pt-0">
+    <BlogGrid />
+  </Section>
+
+  <Section variant="light" divider={true}>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="card-light p-8" data-reveal>
+        <p class="text-xs font-bold uppercase tracking-widest text-teal">Security & compliance</p>
+        <h2 class="heading-section mt-3">Enterprise platform</h2>
+        <p class="body-md mt-3">SOC 2 Type II attested. Listed on SAP Store. Production deployments at global enterprises since 2017.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <img src="/images/soc2.jpg" alt="SOC 2 Type II" class="h-12 w-auto rounded border border-[hsl(var(--light-border))]" loading="lazy" />
+          <img src="/images/sap-store.png" alt="SAP Store" class="h-12 w-auto rounded border border-[hsl(var(--light-border))]" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="card-light p-8" data-reveal data-reveal-delay="2">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal">Get started</p>
+        <h2 class="heading-section mt-3">See it on your data</h2>
+        <p class="body-md mt-3">Book a demo with your documents, ERP, and success metrics — deployed inside your perimeter if required.</p>
+        <div class="mt-6">
+          <Button href="/company/contact" label="Book a Demo" variant="light" />
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section variant="light" divider={false}>
+    <CustomerLogoMarquee variant="light" showBadges={true} />
+  </Section>
+</BaseLayout>

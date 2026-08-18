@@ -1,0 +1,247 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/ui/PageHero.astro";
+import Section from "../../components/Section.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import Button from "../../components/ui/Button.astro";
+import ProductStatsBar from "../../components/ui/ProductStatsBar.astro";
+import SupportedPlatformsBar from "../../components/ui/SupportedPlatformsBar.astro";
+import TechnologyPartnersSection from "../../components/ui/TechnologyPartnersSection.astro";
+import { products, getProduct } from "../../data/products";
+
+export function getStaticPaths() {
+  return products.map((product) => ({
+    params: { slug: product.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const product = getProduct(slug!);
+
+if (!product) {
+  return Astro.redirect("/404");
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: product.name,
+  description: product.description,
+  applicationCategory: "BusinessApplication",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  provider: { "@type": "Organization", name: "Decision Engines", url: "https://decisionengines.ai" },
+};
+
+const faqJsonLd =
+  product.faq && product.faq.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: product.faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }
+    : null;
+
+function checklist(variant: "light" | "dark") {
+  return variant === "dark" ? "product-check product-check-dark" : "product-check";
+}
+---
+
+<BaseLayout title={product.metaTitle} description={product.metaDescription} canonicalUrl={`/product/${product.slug}`}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
+  </Fragment>
+
+  <PageHero
+    label={product.name}
+    title={product.heroTitle}
+    description={product.description}
+    image={product.image}
+    imageAlt={`${product.name} product preview`}
+    variant="light"
+    ctaHref={`/company/contact?product=${product.slug}`}
+    ctaLabel="Book a Demo"
+    breadcrumb={[
+      { label: "Product", href: "/product/invoiceiq" },
+      { label: product.name },
+    ]}
+  />
+
+  {product.stats.length > 0 && <ProductStatsBar stats={product.stats} />}
+
+  {product.intro && (
+    <Section variant="light" divider={false}>
+      <SectionHeader label={product.intro.label} title={product.intro.title} wide />
+      <div class="max-w-3xl space-y-4">
+        {product.intro.paragraphs.map((paragraph, i) => (
+          <p class="body-md text-[hsl(var(--light-muted))]" data-reveal data-reveal-delay={String(i + 1)}>{paragraph}</p>
+        ))}
+      </div>
+    </Section>
+  )}
+
+  {product.sections.map((section) => (
+    <Section variant="light" divider={false}>
+      <SectionHeader label={section.label} title={section.title} description={section.description} wide />
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {section.capabilities.map((cap, i) => (
+          <article class="product-cap-card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <h3 class="heading-card">{cap.title}</h3>
+            <p class="body-md mt-2 text-[hsl(var(--light-muted))]">{cap.description}</p>
+          </article>
+        ))}
+      </div>
+    </Section>
+  ))}
+
+  {product.highlight && (
+    <Section variant="dark" divider={false}>
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div data-reveal>
+          {product.highlight.label && <p class="section-label mb-4">{product.highlight.label}</p>}
+          <h2 class="heading-section text-balance text-white">{product.highlight.title}</h2>
+          {product.highlight.description && (
+            <p class="body-md mt-4 max-w-xl text-white/70">{product.highlight.description}</p>
+          )}
+        </div>
+        <ul class="space-y-3">
+          {product.highlight.bullets.map((bullet, i) => (
+            <li class={checklist("dark")} data-reveal data-reveal-delay={String(i + 1)}>
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-teal-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+  )}
+
+  {product.global && (
+    <Section variant="light" divider={false}>
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div data-reveal>
+          {product.global.label && <p class="section-label mb-4">{product.global.label}</p>}
+          <h2 class="heading-section text-balance">{product.global.title}</h2>
+          <p class="body-md mt-4 max-w-xl text-[hsl(var(--light-muted))]">{product.global.description}</p>
+        </div>
+        <ul class="space-y-3">
+          {product.global.bullets.map((bullet, i) => (
+            <li class={checklist("light")} data-reveal data-reveal-delay={String(i + 1)}>
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+  )}
+
+  {product.partnersSection === "technology" && (
+    <Section variant="light" divider={false} class="!py-16 md:!py-20">
+      <TechnologyPartnersSection />
+    </Section>
+  )}
+
+  {product.partnersSection === "platforms" && (
+    <Section variant="light" divider={false} class="!py-10 md:!py-12">
+      <SupportedPlatformsBar />
+    </Section>
+  )}
+
+  {product.security && (
+    <Section variant="dark" divider={false}>
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div data-reveal>
+          {product.security.label && <p class="section-label mb-4">{product.security.label}</p>}
+          <h2 class="heading-section text-balance text-white">{product.security.title}</h2>
+          <p class="body-md mt-4 max-w-xl text-white/70">{product.security.description}</p>
+        </div>
+        <ul class="space-y-3">
+          {product.security.bullets.map((bullet, i) => (
+            <li class={checklist("dark")} data-reveal data-reveal-delay={String(i + 1)}>
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-teal-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+  )}
+
+  {product.relatedProducts.length > 0 && (
+    <Section variant="light" divider={false}>
+      <SectionHeader label="Also from Decision Engines" title="Complete Your Finance Automation Stack" wide />
+      <div class="grid gap-4 sm:grid-cols-2">
+        {product.relatedProducts.map((related, i) => {
+          const relatedProduct = getProduct(related.slug);
+          return (
+            <a href={`/product/${related.slug}`} class="product-related-card" data-reveal data-reveal-delay={String(i + 1)}>
+              {relatedProduct && (
+                <span class="text-xs font-bold uppercase tracking-widest text-teal">{relatedProduct.name}</span>
+              )}
+              <h3 class="heading-card mt-3">{related.title}</h3>
+              <p class="body-md mt-2 text-[hsl(var(--light-muted))]">{related.description}</p>
+              <span class="mt-4 inline-block text-sm font-medium text-teal">Learn more →</span>
+            </a>
+          );
+        })}
+      </div>
+    </Section>
+  )}
+
+  {product.faq && product.faq.length > 0 && (
+    <Section variant="light" divider={false}>
+      <SectionHeader label="FAQ" title={product.faqTitle ?? "Frequently Asked Questions"} wide />
+      <div class="mx-auto max-w-3xl divide-y divide-[hsl(var(--light-border))] rounded-2xl border border-[hsl(var(--light-border))] bg-white">
+        {product.faq.map((item, i) => (
+          <details class="group px-6 py-5" data-reveal data-reveal-delay={String((i % 4) + 1)}>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-[hsl(var(--light-fg))] marker:content-none [&::-webkit-details-marker]:hidden">
+              {item.question}
+              <svg class="h-4 w-4 shrink-0 text-[hsl(var(--light-muted))] transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <p class="body-md mt-3 pr-8 text-[hsl(var(--light-muted))]">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </Section>
+  )}
+
+  <Section variant="dark" divider={false}>
+    <div class="mx-auto max-w-2xl text-center" data-reveal>
+      <h2 class="heading-section text-white">{product.cta.title}</h2>
+      <p class="body-md mt-4 text-white/70">{product.cta.description}</p>
+      <div class="mt-8">
+        <Button href="/company/contact" label="Book a Demo" variant="primary" />
+      </div>
+      {product.cta.note && (
+        <p class="mt-4 text-sm text-white/50">{product.cta.note}</p>
+      )}
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  .product-cap-card {
+    @apply rounded-xl border border-[hsl(var(--light-border))] bg-white p-5;
+  }
+
+  .product-check {
+    @apply flex gap-3 rounded-xl border border-[hsl(var(--light-border))] bg-white p-4 text-sm text-[hsl(var(--light-muted))];
+  }
+
+  .product-check-dark {
+    @apply border-white/[0.08] bg-white/[0.03] text-white/75;
+  }
+
+  .product-related-card {
+    @apply block rounded-2xl border border-[hsl(var(--light-border))] bg-white p-6 transition-all duration-300 hover:border-teal/30 hover:shadow-md;
+  }
+
+  details[open] summary {
+    color: hsl(var(--accent));
+  }
+</style>

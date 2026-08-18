@@ -1,0 +1,84 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+  variant?: "dark" | "light";
+  image?: string;
+  imageAlt?: string;
+  breadcrumb?: { label: string; href?: string }[];
+  ctaHref?: string;
+  ctaLabel?: string;
+}
+
+const { label, title, description, variant = "dark", image, imageAlt, breadcrumb, ctaHref, ctaLabel } = Astro.props;
+---
+
+<section class:list={["relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20", variant === "light" ? "section-light" : "section-dark"]}>
+  {variant === "dark" && (
+    <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="linear-glow absolute inset-0 opacity-60" />
+    </div>
+  )}
+  <div class="site-container relative">
+    {breadcrumb && breadcrumb.length > 0 && (
+      <nav class="mb-6 flex flex-wrap items-center gap-2 text-xs font-medium text-[hsl(var(--light-muted))]" aria-label="Breadcrumb">
+        {breadcrumb.map((item, i) => (
+          <>
+            {i > 0 && <span class="opacity-40" aria-hidden="true">/</span>}
+            {item.href ? (
+              <a href={item.href} class="transition-colors hover:text-teal">{item.label}</a>
+            ) : (
+              <span class="text-[hsl(var(--light-fg))]">{item.label}</span>
+            )}
+          </>
+        ))}
+      </nav>
+    )}
+
+    <div class:list={["gap-10 lg:gap-14", image ? "grid items-center lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]" : ""]}>
+      <div class="max-w-xl lg:max-w-none">
+        {label && <p class="section-label mb-4">{label}</p>}
+        <h1 class:list={["heading-display text-balance", variant === "light" && "text-[hsl(var(--light-fg))]"]}>{title}</h1>
+        {description && <p class="body-lg mt-6 max-w-2xl">{description}</p>}
+        {ctaHref && ctaLabel && (
+          <div class="mt-8">
+            <a href={ctaHref} class="btn-primary">{ctaLabel}</a>
+          </div>
+        )}
+      </div>
+      {image && (
+        <div class="product-hero-media" data-reveal data-reveal-delay="2">
+          <div class="product-hero-media-frame">
+            <img src={image} alt={imageAlt ?? title} class="product-hero-media-img" loading="eager" />
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .product-hero-media-frame {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid hsl(var(--light-border));
+    background: white;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+  }
+
+  .product-hero-media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top left;
+    padding: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .product-hero-media {
+      align-self: center;
+    }
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import ArchitectureDiagram from "../components/diagrams/ArchitectureDiagram.astro";
+---
+
+<Section id="architecture" variant="dark" divider={false} class="relative overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 linear-glow opacity-25" aria-hidden="true" />
+
+  <div class="relative">
+    <SectionHeader
+      label="Architecture"
+      title="Agent architecture: a co-operative team"
+      description="Specialized agents with role hierarchy, not a linear prompt chain — your team directs, the harness coordinates."
+      wide
+    />
+
+    <ArchitectureDiagram />
+
+    <p class="body-md mt-8 max-w-3xl text-white/55" data-reveal>
+      Every agent reads and writes the same enterprise knowledge graph — no context lost between an invoice, its contract, and the report it feeds.
+    </p>
+  </div>
+</Section>

@@ -1,0 +1,156 @@
+---
+import LogoMarquee from "./LogoMarquee.astro";
+import { customerLogos, trustBadges } from "../../data/customers";
+
+interface Props {
+  variant?: "dark" | "light";
+  showBadges?: boolean;
+  showHeading?: boolean;
+  label?: string;
+  title?: string;
+  badgePosition?: "above" | "below";
+  class?: string;
+}
+
+const {
+  variant = "dark",
+  showBadges = true,
+  showHeading = true,
+  label = "Our customers",
+  title = "Trusted in production at global enterprises",
+  badgePosition = "below",
+  class: className = "",
+} = Astro.props;
+
+const isLight = variant === "light";
+---
+
+<div
+  class:list={["customer-logo-marquee", className]}
+  aria-label="Decision Engines customers"
+>
+  {showBadges && badgePosition === "above" && (
+    <div class="customer-logo-marquee-badges customer-logo-marquee-badges-above" data-reveal>
+      {trustBadges.map((badge) => (
+        <span
+          class:list={[
+            badge.plain
+              ? "customer-logo-marquee-badge-plain"
+              : "customer-logo-marquee-badge",
+            badge.highlight && "customer-logo-marquee-badge-highlight",
+            isLight ? "customer-logo-marquee-badge-light" : "customer-logo-marquee-badge-dark",
+          ]}
+        >
+          {badge.label}
+        </span>
+      ))}
+    </div>
+  )}
+
+  {showHeading && (
+    <div class="customer-logo-marquee-heading" data-reveal>
+      <p class:list={["section-label mb-3 text-center", !isLight && "text-white/50"]}>{label}</p>
+      <p
+        class:list={[
+          "text-center text-base font-semibold tracking-tight md:text-lg",
+          isLight ? "text-[hsl(var(--light-fg))]" : "text-white/90",
+        ]}
+      >
+        {title}
+      </p>
+    </div>
+  )}
+
+  <div class="customer-logo-marquee-logos">
+    <LogoMarquee logos={customerLogos} speed={32} tone={variant} customerContext={true} />
+  </div>
+
+  {showBadges && badgePosition === "below" && (
+    <div class="customer-logo-marquee-badges customer-logo-marquee-badges-below" data-reveal>
+      {trustBadges.map((badge) => (
+        <span
+          class:list={[
+            badge.plain
+              ? "customer-logo-marquee-badge-plain"
+              : "customer-logo-marquee-badge",
+            badge.highlight && "customer-logo-marquee-badge-highlight",
+            isLight ? "customer-logo-marquee-badge-light" : "customer-logo-marquee-badge-dark",
+          ]}
+        >
+          {badge.label}
+        </span>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .customer-logo-marquee {
+    width: 100%;
+  }
+
+  .customer-logo-marquee-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .customer-logo-marquee-logos {
+    width: 100%;
+  }
+
+  .customer-logo-marquee-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem 1rem;
+  }
+
+  .customer-logo-marquee-badges-above {
+    margin-bottom: 1.5rem;
+  }
+
+  .customer-logo-marquee-badges-below {
+    margin-top: 1.5rem;
+  }
+
+  .customer-logo-marquee-badge,
+  .customer-logo-marquee-badge-plain {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .customer-logo-marquee-badge {
+    border-radius: 9999px;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .customer-logo-marquee-badge-highlight.customer-logo-marquee-badge-light {
+    background: hsl(var(--accent) / 0.12);
+    color: hsl(var(--accent));
+  }
+
+  .customer-logo-marquee-badge-highlight.customer-logo-marquee-badge-dark {
+    background: hsl(var(--accent) / 0.18);
+    color: hsl(var(--accent-light));
+  }
+
+  .customer-logo-marquee-badge-light:not(.customer-logo-marquee-badge-highlight):not(.customer-logo-marquee-badge-plain) {
+    background: hsl(var(--light-fg) / 0.06);
+    color: hsl(var(--light-fg) / 0.72);
+  }
+
+  .customer-logo-marquee-badge-dark:not(.customer-logo-marquee-badge-highlight):not(.customer-logo-marquee-badge-plain) {
+    background: hsl(0 0% 100% / 0.1);
+    color: hsl(0 0% 100% / 0.75);
+  }
+
+  .customer-logo-marquee-badge-plain.customer-logo-marquee-badge-light {
+    color: hsl(var(--light-fg) / 0.55);
+  }
+
+  .customer-logo-marquee-badge-plain.customer-logo-marquee-badge-dark {
+    color: hsl(0 0% 100% / 0.55);
+  }
+</style>

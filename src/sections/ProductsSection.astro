@@ -1,0 +1,42 @@
+---
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import { productCards } from "../data/products";
+---
+
+<Section id="products" variant="light" divider={false}>
+  <SectionHeader
+    label="Products"
+    title="Agentic products in production"
+    description="Five agents already running enterprise financial and process workflows."
+    wide
+  />
+
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {productCards.map((product, i) => (
+      <a
+        href={`/product/${product.slug}`}
+        class="card-light-hover group block overflow-hidden"
+        data-reveal
+        data-reveal-delay={String((i % 3) + 1)}
+      >
+        <div class="overflow-hidden bg-[hsl(var(--light-card))]">
+          <img
+            src={product.image}
+            alt={product.name}
+            class="h-36 w-full object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.02]"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 md:p-7">
+          <h3 class="heading-card">{product.name} — {product.tagline}</h3>
+          <p class="body-md mt-2">{product.description}</p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal transition-colors group-hover:text-teal-light">
+            Explore {product.name}
+            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Section>

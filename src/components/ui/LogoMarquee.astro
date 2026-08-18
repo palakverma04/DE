@@ -1,0 +1,302 @@
+---
+export type MarqueeLogo = {
+  name: string;
+  src: string;
+  height?: number;
+};
+
+interface Props {
+  logos: MarqueeLogo[];
+  label?: string;
+  subtitle?: string;
+  speed?: number;
+  tone?: "dark" | "light" | "minimal";
+  customerContext?: boolean;
+  class?: string;
+}
+
+const {
+  logos,
+  label,
+  subtitle,
+  speed = 36,
+  tone = "light",
+  customerContext = false,
+  class: className = "",
+} = Astro.props;
+
+const track = [...logos, ...logos];
+---
+
+<div
+  class:list={[
+    "logo-marquee",
+    tone === "minimal"
+      ? "logo-marquee-minimal"
+      : tone === "dark"
+        ? "logo-marquee-dark"
+        : "logo-marquee-light",
+    className,
+  ]}
+  data-reveal
+>
+  {label && <p class="logo-marquee-label">{label}</p>}
+
+  <div class="logo-marquee-shell">
+    <div class="logo-marquee-fade logo-marquee-fade-left" aria-hidden="true" />
+    <div class="logo-marquee-fade logo-marquee-fade-right" aria-hidden="true" />
+
+    <div class="logo-marquee-viewport">
+      <div
+        class="logo-marquee-track"
+        style={`--marquee-duration: ${speed}s`}
+        aria-hidden="true"
+      >
+        {track.map((logo) => (
+          <div class="logo-marquee-slide">
+            <img
+              src={logo.src}
+              alt={customerContext ? `${logo.name}, Decision Engines customer` : logo.name}
+              title={customerContext ? logo.name : undefined}
+              class="logo-marquee-logo"
+              style={`height: ${logo.height ?? 32}px`}
+              width="160"
+              height={logo.height ?? 32}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <ul class="sr-only">
+      {logos.map((logo) => (
+        <li>{customerContext ? `${logo.name}, Decision Engines customer` : logo.name}</li>
+      ))}
+    </ul>
+  </div>
+
+  {subtitle && <p class="logo-marquee-subtitle">{subtitle}</p>}
+</div>
+
+<style>
+  .logo-marquee {
+    --marquee-gap: 1.25rem;
+    --marquee-slide-min: 11.5rem;
+    width: 100%;
+  }
+
+  .logo-marquee-label {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .logo-marquee-subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  .logo-marquee-shell {
+    position: relative;
+  }
+
+  .logo-marquee-viewport {
+    overflow: hidden;
+  }
+
+  .logo-marquee-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: var(--marquee-gap);
+    animation: logo-marquee-scroll var(--marquee-duration, 36s) linear infinite;
+    will-change: transform;
+  }
+
+  .logo-marquee:hover .logo-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .logo-marquee-slide {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--marquee-slide-min);
+  }
+
+  .logo-marquee-logo {
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+  }
+
+  .logo-marquee-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5rem;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .logo-marquee-fade-left {
+    left: 0;
+  }
+
+  .logo-marquee-fade-right {
+    right: 0;
+  }
+
+  /* Dark sections — white logo tiles (Stripe / enterprise pattern) */
+  .logo-marquee-dark .logo-marquee-label {
+    color: hsl(0 0% 100% / 0.5);
+  }
+
+  .logo-marquee-dark .logo-marquee-subtitle {
+    color: hsl(0 0% 100% / 0.4);
+  }
+
+  .logo-marquee-dark .logo-marquee-fade-left {
+    background: linear-gradient(to right, hsl(216 45% 14%), transparent);
+  }
+
+  .logo-marquee-dark .logo-marquee-fade-right {
+    background: linear-gradient(to left, hsl(216 45% 14%), transparent);
+  }
+
+  .logo-marquee-dark .logo-marquee-slide {
+    min-width: 9.5rem;
+    height: 3.75rem;
+    padding: 0 1.25rem;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    box-shadow: 0 1px 3px hsl(216 58% 11% / 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .logo-marquee-dark .logo-marquee-slide:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px hsl(216 58% 11% / 0.18);
+  }
+
+  .logo-marquee-dark .logo-marquee-logo {
+    filter: none;
+    opacity: 1;
+  }
+
+  /* Minimal — monochrome logos on dark, no tiles (Linear / Vercel pattern) */
+  .logo-marquee-minimal .logo-marquee-label {
+    color: hsl(0 0% 100% / 0.35);
+  }
+
+  .logo-marquee-minimal .logo-marquee-fade-left {
+    background: linear-gradient(to right, hsl(216 58% 11%), transparent);
+  }
+
+  .logo-marquee-minimal .logo-marquee-fade-right {
+    background: linear-gradient(to left, hsl(216 58% 11%), transparent);
+  }
+
+  .logo-marquee-minimal .logo-marquee-slide {
+    min-width: auto;
+    height: auto;
+    padding: 0 2rem;
+    background: none;
+    box-shadow: none;
+  }
+
+  .logo-marquee-minimal .logo-marquee-logo {
+    max-width: 110px;
+    filter: brightness(0) invert(1);
+    opacity: 0.38;
+    transition: opacity 0.25s ease;
+  }
+
+  .logo-marquee-minimal .logo-marquee-slide:hover .logo-marquee-logo {
+    opacity: 0.72;
+  }
+
+  /* Light sections — full-color logos, no box */
+  .logo-marquee-light .logo-marquee-label {
+    color: hsl(215 16% 47%);
+  }
+
+  .logo-marquee-light .logo-marquee-subtitle {
+    color: hsl(215 16% 47%);
+  }
+
+  .logo-marquee-light .logo-marquee-fade-left {
+    background: linear-gradient(to right, hsl(210 20% 98%), transparent);
+  }
+
+  .logo-marquee-light .logo-marquee-fade-right {
+    background: linear-gradient(to left, hsl(210 20% 98%), transparent);
+  }
+
+  .logo-marquee-light .logo-marquee-slide {
+    min-width: 9rem;
+    padding: 0 0.5rem;
+  }
+
+  .logo-marquee-light .logo-marquee-logo {
+    opacity: 1;
+    filter: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .logo-marquee-light .logo-marquee-slide:hover .logo-marquee-logo {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  @keyframes logo-marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - var(--marquee-gap) / 2));
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo-marquee {
+      --marquee-gap: 1.5rem;
+    }
+
+    .logo-marquee-dark .logo-marquee-slide {
+      min-width: 11.5rem;
+      height: 4.75rem;
+      padding: 0 1.75rem;
+    }
+
+    .logo-marquee-minimal .logo-marquee-slide {
+      padding: 0 2.5rem;
+    }
+
+    .logo-marquee-minimal .logo-marquee-logo {
+      max-width: 120px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 1rem 1.5rem;
+    }
+
+    .logo-marquee-fade {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import { cloudPartners, technologyPartnersCopy } from "../../data/platforms";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "Our Partners", description = technologyPartnersCopy } = Astro.props;
+---
+
+<div class="technology-partners" data-reveal>
+  <h2 class="heading-section text-center text-balance">{title}</h2>
+  <p class="body-md mx-auto mt-4 max-w-2xl text-center text-[hsl(var(--light-muted))]">{description}</p>
+  <ul class="technology-partners-logos">
+    {cloudPartners.map((partner) => (
+      <li class="technology-partners-item">
+        <img
+          src={partner.src}
+          alt={partner.name}
+          title={partner.name}
+          style={`height: ${partner.height ?? 32}px`}
+          loading="lazy"
+          decoding="async"
+        />
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .technology-partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem 3.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 2.5rem auto 0;
+    max-width: 56rem;
+  }
+
+  .technology-partners-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .technology-partners-item img {
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+  }
+
+  @media (min-width: 768px) {
+    .technology-partners-logos {
+      flex-wrap: nowrap;
+      gap: 3rem;
+    }
+  }
+</style>

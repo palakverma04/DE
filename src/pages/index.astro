@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../sections/Hero.astro";
+import ProblemSection from "../sections/ProblemSection.astro";
+import ValuePropSection from "../sections/ValuePropSection.astro";
+import ProductsSection from "../sections/ProductsSection.astro";
+import ArchitectureSection from "../sections/ArchitectureSection.astro";
+import ComparisonSection from "../sections/ComparisonSection.astro";
+import DeploymentSection from "../sections/DeploymentSection.astro";
+import ProofSection from "../sections/ProofSection.astro";
+import CTASection from "../sections/CTASection.astro";
+
+const siteUrl = "https://decisionengines.ai";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Decision Engines",
+      url: siteUrl,
+      logo: { "@type": "ImageObject", url: `${siteUrl}/logo-white.png` },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Decision Engines",
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en-US",
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Decision Engines — Agentic Financial Operations Platform"
+  description="AI that learns your books, runs your close — and stays yours. Specialized agents for AP, contracts, and reporting with sovereign deployment."
+  canonicalUrl="/"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+  <Hero />
+  <ProblemSection />
+  <ValuePropSection />
+  <ProductsSection />
+  <ArchitectureSection />
+  <ComparisonSection />
+  <DeploymentSection />
+  <ProofSection />
+  <CTASection />
+</BaseLayout>

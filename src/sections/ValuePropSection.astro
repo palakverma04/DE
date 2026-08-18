@@ -1,0 +1,68 @@
+---
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+
+const pillars = [
+  {
+    label: "Learn",
+    title: "Fine-tunes to your business",
+    description:
+      "Every correction trains your organization's own LoRA adapters — your model gets sharper with every document, not the vendor's shared model.",
+    icon: "brain",
+  },
+  {
+    label: "Run",
+    title: "Executes end to end",
+    description:
+      "Agents run AP, contracts, and reporting to completion — orchestrated, metered, and audited, not just extracted and handed back to a human.",
+    icon: "cycle",
+  },
+  {
+    label: "Own",
+    title: "Stays inside your perimeter",
+    description:
+      "Deployed on-prem, at the edge, or in your cloud. Your adapters, your knowledge graph, your data — never rented, never shared across customers.",
+    icon: "lock",
+  },
+];
+---
+
+<Section variant="dark" divider={false} class="relative overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 linear-glow opacity-40" aria-hidden="true" />
+
+  <div class="relative">
+    <SectionHeader
+      label="Why Decision Engines"
+      title="Own your financial intelligence. Don't rent it."
+      description="Generic AP tools process your documents and forget everything tomorrow. Decision Engines turns every invoice, contract, and correction into intelligence you own."
+      wide
+    />
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {pillars.map((p, i) => (
+        <div class="value-card p-6 md:p-8" data-reveal data-reveal-delay={String(i + 1)}>
+          <div class="mb-4 flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-teal/20 text-teal-light">
+              {p.icon === "brain" && (
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path d="M9.5 2a5.5 5.5 0 00-4.8 8.2 4 4 0 00-.7 7.8V20a2 2 0 002 2h7a2 2 0 002-2v-2a4 4 0 00-.7-7.8A5.5 5.5 0 0014.5 2"/></svg>
+              )}
+              {p.icon === "cycle" && (
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path d="M21 12a9 9 0 11-3-6.7M21 3v6h-6"/></svg>
+              )}
+              {p.icon === "lock" && (
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 118 0v4"/></svg>
+              )}
+            </div>
+            <span class="pillar-label">{p.label}</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">{p.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-white/65">{p.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-10 text-center text-sm italic text-white/60" data-reveal>
+      The result: an AP platform that is measurably more accurate on day 1,000 than day 1 — and an asset that compounds in value the longer you run it.
+    </p>
+  </div>
+</Section>

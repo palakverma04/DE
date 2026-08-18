@@ -1,0 +1,79 @@
+---
+import { invoiceSupportedPlatforms } from "../../data/platforms";
+
+interface Props {
+  label?: string;
+}
+
+const { label = "Supported Platforms" } = Astro.props;
+---
+
+<div class="supported-platforms" data-reveal>
+  <p class="supported-platforms-label">{label}</p>
+  <ul class="supported-platforms-grid">
+    {invoiceSupportedPlatforms.map((platform) => (
+      <li class="supported-platforms-item">
+        <img
+          src={platform.src}
+          alt={platform.name}
+          title={platform.name}
+          style={`height: ${platform.height ?? 22}px`}
+          loading="lazy"
+          decoding="async"
+        />
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .supported-platforms {
+    text-align: center;
+  }
+
+  .supported-platforms-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: hsl(var(--light-muted));
+    margin-bottom: 1.25rem;
+  }
+
+  .supported-platforms-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+
+  .supported-platforms-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .supported-platforms-item img {
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    opacity: 0.9;
+  }
+
+  @media (min-width: 1024px) {
+    .supported-platforms-grid {
+      flex-wrap: nowrap;
+      gap: 1.75rem;
+    }
+
+    .supported-platforms-item img {
+      max-width: 88px;
+    }
+  }
+</style>

@@ -1,0 +1,364 @@
+---
+const agents = [
+  {
+    title: "AP & Procurement",
+    product: "InvoiceIQ",
+    description: "Invoice intake, PO match, approvals, and touchless posting",
+    icon: "ap",
+  },
+  {
+    title: "Contracts & Risk",
+    product: "ContractIQ",
+    description: "Clause extraction, obligation tracking, and compliance checks",
+    icon: "contract",
+  },
+  {
+    title: "Finance & Reporting",
+    product: "ConverseIQ",
+    description: "Natural-language queries, exceptions, and close reporting",
+    icon: "finance",
+  },
+];
+
+const foundation = [
+  "Enterprise Knowledge Graph",
+  "Fine-Tuned Model Registry",
+  "Connector / Event Bus",
+];
+---
+
+<div class="architecture-diagram" data-reveal>
+  <div class="arch-layer">
+    <p class="arch-layer-label">Orchestrate</p>
+    <div class="arch-layer-content">
+      <div class="arch-orchestrator">
+        <div class="arch-orchestrator-head">
+          <span class="arch-product-tag">DecisionIQ</span>
+          <span class="arch-orchestrator-badge">Orchestrator</span>
+        </div>
+        <p class="arch-orchestrator-title">Coordinates specialized agents — not a linear prompt chain</p>
+        <ul class="arch-orchestrator-steps" aria-label="Orchestrator responsibilities">
+          <li>Decompose goals</li>
+          <li>Delegate work</li>
+          <li>Track state</li>
+          <li>Synthesize results</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="arch-connector" aria-hidden="true">
+    <span class="arch-connector-line"></span>
+    <span class="arch-connector-node"></span>
+    <span class="arch-connector-line"></span>
+  </div>
+
+  <div class="arch-layer">
+    <p class="arch-layer-label">Execute</p>
+    <div class="arch-layer-content">
+      <div class="arch-agents">
+        {agents.map((agent) => (
+          <article class="arch-agent">
+            <div class="arch-agent-top">
+              <div class="arch-agent-icon" aria-hidden="true">
+                {agent.icon === "ap" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                  </svg>
+                )}
+                {agent.icon === "contract" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <path d="M14 2v6h6M9 13h6M9 17h4"/>
+                  </svg>
+                )}
+                {agent.icon === "finance" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                    <path d="M3 3v18h18M7 16l4-4 4 4 5-6"/>
+                  </svg>
+                )}
+              </div>
+              <span class="arch-product-tag">{agent.product}</span>
+            </div>
+            <h3 class="arch-agent-title">{agent.title}</h3>
+            <p class="arch-agent-desc">{agent.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="arch-connector" aria-hidden="true">
+    <span class="arch-connector-line"></span>
+    <span class="arch-connector-node"></span>
+    <span class="arch-connector-line"></span>
+  </div>
+
+  <div class="arch-layer">
+    <p class="arch-layer-label">Foundation</p>
+    <div class="arch-layer-content">
+      <div class="arch-foundation">
+        {foundation.map((item) => (
+          <div class="arch-foundation-item">
+            <span class="arch-foundation-dot" aria-hidden="true"></span>
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .architecture-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .arch-layer {
+    display: grid;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .arch-layer {
+      grid-template-columns: 6.5rem minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .arch-layer-label {
+    margin: 0;
+    padding-top: 0.875rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: hsl(var(--accent-light));
+  }
+
+  @media (max-width: 767px) {
+    .arch-layer-label {
+      padding-top: 0;
+    }
+  }
+
+  .arch-layer-content {
+    min-width: 0;
+  }
+
+  .arch-orchestrator {
+    border-radius: 1rem;
+    border: 1px solid hsl(var(--accent) / 0.35);
+    background:
+      linear-gradient(135deg, hsl(var(--accent) / 0.12) 0%, hsl(216 45% 14%) 45%, hsl(216 45% 12%) 100%);
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 0 0 1px hsl(0 0% 100% / 0.04) inset;
+  }
+
+  @media (min-width: 768px) {
+    .arch-orchestrator {
+      padding: 1.5rem 1.75rem;
+    }
+  }
+
+  .arch-orchestrator-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+
+  .arch-product-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    background: hsl(var(--accent) / 0.16);
+    padding: 0.25rem 0.625rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: hsl(var(--accent-light));
+  }
+
+  .arch-orchestrator-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: hsl(0 0% 100% / 0.55);
+  }
+
+  .arch-orchestrator-title {
+    margin: 0.875rem 0 0;
+    max-width: 42rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    color: hsl(0 0% 100% / 0.94);
+  }
+
+  @media (min-width: 768px) {
+    .arch-orchestrator-title {
+      font-size: 1.0625rem;
+    }
+  }
+
+  .arch-orchestrator-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .arch-orchestrator-steps li {
+    border-radius: 9999px;
+    border: 1px solid hsl(0 0% 100% / 0.1);
+    background: hsl(0 0% 100% / 0.04);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: hsl(0 0% 100% / 0.72);
+  }
+
+  .arch-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.35rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .arch-connector {
+      margin-left: 6.5rem;
+      padding-left: 0;
+      align-items: flex-start;
+    }
+  }
+
+  .arch-connector-line {
+    display: block;
+    width: 1px;
+    height: 0.875rem;
+    background: linear-gradient(to bottom, hsl(var(--accent) / 0.05), hsl(var(--accent) / 0.45));
+  }
+
+  .arch-connector-line:last-child {
+    background: linear-gradient(to bottom, hsl(var(--accent) / 0.45), hsl(var(--accent) / 0.05));
+  }
+
+  .arch-connector-node {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: hsl(var(--accent-light));
+    box-shadow: 0 0 0 4px hsl(var(--accent) / 0.15);
+  }
+
+  .arch-agents {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .arch-agents {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+  }
+
+  .arch-agent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0.875rem;
+    border: 1px solid hsl(0 0% 100% / 0.08);
+    background: hsl(216 45% 13%);
+    padding: 1.125rem 1.125rem 1.25rem;
+    transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .arch-agent:hover {
+    border-color: hsl(var(--accent) / 0.3);
+    background: hsl(216 45% 15%);
+    transform: translateY(-2px);
+  }
+
+  .arch-agent-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .arch-agent-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: hsl(var(--accent) / 0.14);
+    color: hsl(var(--accent-light));
+  }
+
+  .arch-agent-icon svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .arch-agent-title {
+    margin: 0.875rem 0 0;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: hsl(0 0% 100% / 0.94);
+  }
+
+  .arch-agent-desc {
+    margin: 0.5rem 0 0;
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: hsl(0 0% 100% / 0.58);
+  }
+
+  .arch-foundation {
+    display: grid;
+    gap: 0.625rem;
+  }
+
+  @media (min-width: 768px) {
+    .arch-foundation {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+  }
+
+  .arch-foundation-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.75rem;
+    border: 1px solid hsl(0 0% 100% / 0.08);
+    background: hsl(0 0% 100% / 0.03);
+    padding: 0.875rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: hsl(0 0% 100% / 0.82);
+  }
+
+  .arch-foundation-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    background: hsl(var(--accent-light));
+  }
+</style>

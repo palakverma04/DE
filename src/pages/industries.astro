@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/ui/PageHero.astro";
+import Section from "../components/Section.astro";
+import { industries } from "../data/industries";
+---
+
+<BaseLayout
+  title="Industries | Decision Engines"
+  description="Agentic financial operations for financial services, healthcare, telecom, e-commerce, and technology enterprises."
+  canonicalUrl="/industries"
+>
+  <PageHero
+    label="Industries"
+    title="Built for complex enterprise finance"
+    description="Decision Engines deploys in industries where audit trails, data sovereignty, and ERP complexity are non-negotiable."
+    variant="light"
+  />
+
+  <Section variant="light" divider={false}>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {industries.map((industry, i) => (
+        <div class="card-light-hover p-6 md:p-7" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+          <h2 class="heading-card">{industry.name}</h2>
+          <p class="body-md mt-2">{industry.description}</p>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-widest text-teal">In production</p>
+          <p class="mt-2 text-sm text-[hsl(var(--light-muted))]">{industry.customers.join(" · ")}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

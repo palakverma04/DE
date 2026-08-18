@@ -1,0 +1,47 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  variant?: "primary" | "secondary" | "ghost" | "light" | "outline-light";
+  class?: string;
+  target?: string;
+  rel?: string;
+  showArrow?: boolean;
+}
+
+const {
+  href,
+  label,
+  variant = "secondary",
+  class: className = "",
+  target,
+  rel,
+  showArrow = false,
+} = Astro.props;
+
+const isExternal = href.startsWith("http");
+const linkTarget = target ?? (isExternal ? "_blank" : undefined);
+const linkRel = rel ?? (isExternal ? "noopener noreferrer" : undefined);
+
+const variants = {
+  primary: "btn-primary",
+  secondary: "btn-secondary",
+  ghost: "btn-ghost text-muted-foreground hover:text-foreground",
+  light: "btn-light",
+  "outline-light": "btn-outline-light",
+};
+---
+
+<a
+  href={href}
+  target={linkTarget}
+  rel={linkRel}
+  class:list={[variants[variant], className]}
+>
+  {label}
+  {showArrow && (
+    <svg class="h-3.5 w-3.5 shrink-0 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+    </svg>
+  )}
+</a>

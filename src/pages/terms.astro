@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/ui/PageHero.astro";
+import Section from "../components/Section.astro";
+---
+
+<BaseLayout title="Terms & Conditions | Decision Engines" description="Decision Engines terms and conditions." canonicalUrl="/terms">
+  <PageHero label="Legal" title="Terms & Conditions" variant="light" />
+  <Section variant="light" divider={false}>
+    <div class="prose prose-light mx-auto max-w-3xl" data-reveal>
+      <p><strong>Last updated:</strong> January 2026</p>
+      <p>These Terms and Conditions govern your use of the Decision Engines website and services. By accessing our site, you agree to these terms.</p>
+      <h2>Use of services</h2>
+      <p>Decision Engines provides enterprise AI software and services subject to separate license agreements. Website content is for informational purposes only.</p>
+      <h2>Intellectual property</h2>
+      <p>All content, trademarks, and technology on this site are owned by Decision Engines, Inc. or its licensors.</p>
+      <h2>Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, Decision Engines shall not be liable for indirect, incidental, or consequential damages arising from use of this website.</p>
+      <h2>Contact</h2>
+      <p>Questions about these terms: <a href="mailto:info@decisionengines.ai">info@decisionengines.ai</a>.</p>
+    </div>
+  </Section>
+</BaseLayout>

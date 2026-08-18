@@ -1,0 +1,21 @@
+---
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import MetricCard from "../components/ui/MetricCard.astro";
+import { proofMetrics } from "../data/site";
+---
+
+<Section id="proof" variant="light" divider={false}>
+  <SectionHeader
+    label="Proof"
+    title="Proof points"
+    description="Published performance metrics and enterprise deployments in production today."
+    wide
+  />
+
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {proofMetrics.map((metric, i) => (
+      <MetricCard value={metric.value} label={metric.label} data-reveal data-reveal-delay={String((i % 3) + 1)} />
+    ))}
+  </div>
+</Section>

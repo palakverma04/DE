@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} | Decision Engines`}
+  description={post.data.description}
+  canonicalUrl={`/blog/${post.id}`}
+  ogType="article"
+  publishedTime={post.data.pubDate.toISOString()}
+>
+  <Section variant="light" divider={false} class="pt-32">
+    <article class="mx-auto max-w-3xl">
+      <header>
+        <p class="section-label">{post.data.category}</p>
+        <h1 class="heading-display mt-4 text-[hsl(var(--light-fg))]">{post.data.title}</h1>
+        <p class="body-lg mt-4">{post.data.description}</p>
+        <time datetime={post.data.pubDate.toISOString()} class="mt-4 block text-sm text-[hsl(var(--light-muted))]">
+          {post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </header>
+      {post.data.image && (
+        <img
+          src={post.data.image}
+          alt=""
+          class="mt-8 w-full rounded-xl border border-[hsl(var(--light-border))]"
+        />
+      )}
+      <div class="prose prose-light mt-12 max-w-none">
+        <Content />
+      </div>
+      <div class="mt-12">
+        <a href="/resources" class="text-sm font-medium text-teal hover:text-teal-light">← Back to resources</a>
+      </div>
+    </article>
+  </Section>
+</BaseLayout>

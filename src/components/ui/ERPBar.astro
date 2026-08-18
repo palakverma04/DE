@@ -1,0 +1,29 @@
+---
+import LogoMarquee from "./LogoMarquee.astro";
+import { erpPartners } from "../../data/site";
+
+interface Props {
+  tone?: "dark" | "light";
+}
+
+const { tone = "light" } = Astro.props;
+
+const platforms = [
+  { name: "SAP", src: "/images/platforms/sap.png", height: 30 },
+  { name: "Oracle Cloud", src: "/images/platforms/oracle.png", height: 28 },
+  { name: "Microsoft Dynamics 365", src: "/images/platforms/dynamics.png", height: 28 },
+  { name: "JD Edwards", src: "/images/platforms/jdedwards.png", height: 26 },
+  { name: "PeopleSoft", src: "/images/platforms/peoplesoft.png", height: 24 },
+  { name: "UiPath", src: "/images/platforms/uipath.png", height: 28 },
+  { name: "Automation Anywhere", src: "/images/platforms/automation-anywhere.png", height: 28 },
+];
+---
+
+<LogoMarquee
+  class="mt-12"
+  logos={platforms}
+  label="ERP & Automation Substrate"
+  subtitle={erpPartners.join(" · ")}
+  speed={28}
+  tone={tone}
+/>

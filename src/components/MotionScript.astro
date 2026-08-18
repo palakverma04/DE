@@ -1,0 +1,38 @@
+<script is:inline>
+  (function () {
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function show(el) {
+      el.classList.add("is-visible");
+    }
+
+    if (reduced) {
+      document.querySelectorAll("[data-reveal]").forEach(show);
+      return;
+    }
+
+    var items = document.querySelectorAll("[data-reveal]");
+    if (!items.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach(show);
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            show(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
+    );
+
+    items.forEach(function (el) {
+      observer.observe(el);
+    });
+  })();
+</script>

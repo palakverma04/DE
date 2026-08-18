@@ -1,0 +1,8 @@
+name = "decisionengines"
+compatibility_date = "2026-03-16"
+
+[placement]
+mode = "smart"
+
+[assets]
+directory = "dist"
