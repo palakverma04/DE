@@ -7,7 +7,7 @@ const problems = [
   {
     title: "ERPs are not APIs",
     description:
-      "Salesforce, SAP, Oracle, and NetSuite were built for humans clicking screens — not agent-ready interfaces. Line-item extraction, GL coding, and approval routing require deep schema understanding that most AI stacks lack.",
+      "SAP, Oracle, and NetSuite were built for humans clicking screens. Line-item extraction, GL coding, and approval routing require deep schema understanding that most AI stacks lack.",
     icon: "erp",
   },
   {
@@ -29,9 +29,9 @@ const problems = [
   <CustomerStrip />
 
   <SectionHeader
-    label="The problem"
-    title="Where finance operations actually break"
-    description="Chat copilots answer questions. Financial operations have ERPs, approval chains, and data that cannot leave the building."
+    label="The challenge"
+    title="Finance automation breaks where work still needs judgment"
+    description="Copilots answer questions. Extraction tools stop at the data. Neither executes a full process inside your ERP — with policies, approvals, and audit trails intact."
     wide
   />
 
@@ -54,8 +54,4 @@ const problems = [
       </div>
     ))}
   </div>
-
-  <p class="mt-10 text-center text-sm italic text-teal" data-reveal>
-    Every finance team runs into this within the first quarter of any automation project.
-  </p>
 </Section>

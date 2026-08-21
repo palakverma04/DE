@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Decision Engines",
-  url: "https://decisionengines.ai",
+  url: "https://de-phi-seven.vercel.app",
   description:
-    "Agentic financial operations platform — specialized agents that execute AP, contracts, and reporting end to end.",
-  demoUrl: "https://decisionengines.ai/contact",
+    "Agentic financial operations platform — specialized AI agents that execute AP, contracts, and financial workflows end to end, fine-tuned to your organization.",
+  demoUrl: "https://de-phi-seven.vercel.app/company/contact",
   email: "info@decisionengines.ai",
   social: {
     x: "https://x.com/decisionengines",
@@ -33,8 +33,12 @@ export const proofMetrics = [
 
 export const comparisonRows = [
   {
-    generic: "One-size-fits-all model — same accuracy on day 1,000 as day 1.",
-    de: "**Continuous fine-tuning:** every correction sharpens your organization's own LoRA adapters.",
+    generic: "Extracts data and hands exceptions back to your team.",
+    de: "**Executes end to end** — matching, coding, routing, and posting through your ERP.",
+  },
+  {
+    generic: "Static automation — same accuracy on day 1,000 as day 1.",
+    de: "**Continuous fine-tuning:** every correction sharpens your organization's own adapters.",
   },
   {
     generic: "Cloud-only processing; data leaves your perimeter.",
@@ -42,7 +46,7 @@ export const comparisonRows = [
   },
   {
     generic: "One large model handles every task.",
-    de: "**Multiple specialized models routed per task** — fast extraction, deep reasoning.",
+    de: "**Multiple specialized models routed per task** — orchestrated with full auditability.",
   },
   {
     generic: "Re-onboard from scratch for each new entity or department.",

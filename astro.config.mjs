@@ -9,7 +9,7 @@ const isVercel = process.env.VERCEL === '1';
 
 export default defineConfig({
   adapter: isVercel ? vercel() : cloudflare(),
-  site: 'https://decisionengines.ai',
+  site: 'https://de-phi-seven.vercel.app',
   build: {
     inlineStylesheets: 'always',
   },

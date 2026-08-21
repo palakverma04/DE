@@ -6,11 +6,13 @@ import ValuePropSection from "../sections/ValuePropSection.astro";
 import ProductsSection from "../sections/ProductsSection.astro";
 import ArchitectureSection from "../sections/ArchitectureSection.astro";
 import ComparisonSection from "../sections/ComparisonSection.astro";
-import DeploymentSection from "../sections/DeploymentSection.astro";
 import ProofSection from "../sections/ProofSection.astro";
+import DeploymentSection from "../sections/DeploymentSection.astro";
 import CTASection from "../sections/CTASection.astro";
 
-const siteUrl = "https://decisionengines.ai";
+import { siteConfig } from "../data/site";
+
+const siteUrl = siteConfig.url;
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -35,7 +37,7 @@ const jsonLd = {
 
 <BaseLayout
   title="Decision Engines — Agentic Financial Operations Platform"
-  description="AI that learns your books, runs your close — and stays yours. Specialized agents for AP, contracts, and reporting with sovereign deployment."
+  description="Specialized AI agents that execute AP, contracts, and financial workflows end to end — fine-tuned to your organization and deployed inside your perimeter."
   canonicalUrl="/"
 >
   <Fragment slot="head">
@@ -47,7 +49,7 @@ const jsonLd = {
   <ProductsSection />
   <ArchitectureSection />
   <ComparisonSection />
-  <DeploymentSection />
   <ProofSection />
+  <DeploymentSection />
   <CTASection />
 </BaseLayout>

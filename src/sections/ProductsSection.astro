@@ -7,8 +7,8 @@ import { productCards } from "../data/products";
 <Section id="products" variant="light" divider={false}>
   <SectionHeader
     label="Products"
-    title="Agentic products in production"
-    description="Five agents already running enterprise financial and process workflows."
+    title="Specialized agents in production"
+    description="Five agents covering AP, contracts, conversation, orchestration, and ERP integration — deployed at global enterprises today."
     wide
   />
 
@@ -29,10 +29,11 @@ import { productCards } from "../data/products";
           />
         </div>
         <div class="p-6 md:p-7">
-          <h3 class="heading-card">{product.name} — {product.tagline}</h3>
+          <h3 class="heading-card">{product.name}</h3>
+          <p class="mt-1 text-sm font-medium text-teal">{product.tagline}</p>
           <p class="body-md mt-2">{product.description}</p>
           <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal transition-colors group-hover:text-teal-light">
-            Explore {product.name}
+            Learn more
             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </span>
         </div>
